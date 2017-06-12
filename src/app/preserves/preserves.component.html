@@ -1,0 +1,31 @@
+<section class="body" style="margin-top: 100px">
+  <!--for demo wrap-->
+  <h1>Egyptian Preserves </h1>
+  <!--<img src="./assets/images/Pascal_render.png" alt="lizard" width="100px" style="margin-left: 1130px;position: absolute">-->
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0" >
+      <thead>
+        <tr>
+          <th><b>Table Index</b></th>
+          <th><b>Protected Area</b></th>
+          <th><b>Declaration Date</b></th>
+          <th><b>Area Km<sup>2</sup></b></th>
+          <th><b>Governorate</b></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let item of preserveData">
+          <td> {{item.Index}}</td>
+          <td>{{item.ProtectedArea}}</td>
+          <td>{{item.DeclarationDate}}</td>
+          <td>{{item.Area}}</td>
+          <td>{{item.Governorate}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="text-center">Our Entertainment Places</h2>
+      <input type="text" class="form-control input" placeholder="Search Animals" [(ngModel)]="SearchKey">
+
+  <div class="row" >
+    <div class="col-md-4 col-sm-6 " *ngFor="let place of places | searchPlace:SearchKey " >
+      <div class="thumbnail">
+        <a href="#">
+          <img [src]='place.Image' alt="Lights" style="width:100%"></a>
+          <!--<img src="./assets/images/lights.jpg" alt="Lights" style="width:100%"></a>-->
+          <div class="caption">
+         <h4>{{ place.Title }}</h4>
+            <p>{{ place.Description }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

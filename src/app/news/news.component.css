@@ -1,0 +1,31 @@
+.container h1{
+	font-family: 'CHAWP';
+	margin-bottom: 2%;
+	color: #4e6d34;
+}
+body{
+	background-color: rgba(255, 233, 150, 0.16);
+}
+
+.caption h3{
+		/*font-family: 'Myriad';*/
+		font-size: xx-large;
+		color: #4e6d34;
+}
+
+.caption h3:hover{
+	color: darksalmon
+}
+.thumbnail a,.caption a{
+      text-decoration: none;
+}
+.thumbnail{
+ padding: 10px;
+}
+
+.thumbnail img{
+	border-radius: 5px;
+}
+
+
+
