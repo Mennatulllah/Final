@@ -35,6 +35,7 @@ import { AnimalSearchPipe } from '../pipes/animal-search.pipe';
 import { EntertainPlacesComponent } from './entertain-places/entertain-places.component';
 import { HistoricalPlacesComponent } from './historical-places/historical-places.component';
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
+import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { SearchPlacePipe } from '../pipes/search-place.pipe';
     AnimalSearchPipe,
     EntertainPlacesComponent,
     HistoricalPlacesComponent,
-    SearchPlacePipe
+    SearchPlacePipe,
+    HeaderWelcomeComponent
     
   ],
   imports: [
