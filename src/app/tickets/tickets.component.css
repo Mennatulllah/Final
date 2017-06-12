@@ -46,7 +46,7 @@ h6{
     height: 100%;
 }
 .cont > div{
-  height:233px;
+  height:172px;
   width:91%;
   background-image: url(../../assets/images/oldT.jpg);
 	background-repeat: no-repeat;
@@ -172,7 +172,7 @@ font-size: 20px;
 }
 @media (max-width: 479px){
 .cont > div {
-    height: 305px;}
+    height: 235px;}
 .cont > div .tck-info {
        width: 57%;
     float: left;
@@ -205,7 +205,7 @@ font-size: 20px;
 
 @media (min-width: 992px) and (max-width: 1199px) {
 .cont > div {
-    height: 248px;}
+    height: 182px;}
 .cont > div .tck-info {
     width: 69%;
     float: left;
