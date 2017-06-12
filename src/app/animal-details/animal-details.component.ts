@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {AppService} from '../app.service'
 import { Animal } from '../../Interfaces/Animal'
 
+
 @Component({
   // moduleId: module.id,
   selector: 'app-animal-details',
