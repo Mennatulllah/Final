@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {AppService} from '../app.service'
-import { FaqTypeService } from '../FAQType.service';
 import {FAQ} from '../../Interfaces/FAQ';
 import {FAQType} from '../../Interfaces/FAQType';
 
