@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactusService } from '../contactus.service';
+// import { ContactusService } from '../contactus.service';
+import { AppService} from '../app.service'
 import { Contact } from '../../Interfaces/Contacts'
 
 
@@ -13,7 +14,7 @@ export class FooterComponent implements OnInit {
   Contacts: any[];
 
   contacts : Contact[]=[];
-  constructor(private contactServ: ContactusService) { }
+  constructor(private contactServ: AppService) { }
 
   ngOnInit() {
      this.contactServ.getAllContacts().subscribe(Contacts => { 

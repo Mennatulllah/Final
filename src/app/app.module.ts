@@ -16,6 +16,7 @@ import { PreservesComponent } from './preserves/preserves.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { NewsComponent } from './news/news.component';
 import { AnimalsComponent } from './animals/animals.component';
+import { AnimalDetailsComponent } from './animal-details/animal-details.component';
 import { StaffComponent } from './staff/staff.component';
 import { TipsComponent } from './tipsforyouvisit/tips.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,15 +26,7 @@ import { GalleryComponent } from './gallery/gallery.component'
 
 // services
 
-import { FaqService } from './faq.service';
-import { ZoosService } from './zoos.service';
-import { NewsService } from './news.service';
-import { AnimalsService } from './animals.service';
-import {TicketsService} from './tickets.service';
-import {FaqTypeService} from './FAQType.service';
-import {PreserveService} from './preserve.service';
-import { ContactusService } from './contactus.service';
-import { PlacesService } from './places.service'
+import { AppService } from './app.service'
 
 
 // pipes
@@ -42,9 +35,7 @@ import { AnimalSearchPipe } from '../pipes/animal-search.pipe';
 import { EntertainPlacesComponent } from './entertain-places/entertain-places.component';
 import { HistoricalPlacesComponent } from './historical-places/historical-places.component';
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
-import { PreservesContainerComponent } from './preserves-container/preserves-container.component';
-import { PreservesFilterComponent } from './preserves-filter/preserves-filter.component';
-import { PreservesContentComponent } from './preserves-content/preserves-content.component'
+
 
 @NgModule({
   declarations: [
@@ -57,6 +48,7 @@ import { PreservesContentComponent } from './preserves-content/preserves-content
     TicketsComponent,
     NewsComponent,
     AnimalsComponent,
+    AnimalDetailsComponent,
     StaffComponent,
     TipsComponent,
     HeaderComponent,
@@ -67,10 +59,7 @@ import { PreservesContentComponent } from './preserves-content/preserves-content
     AnimalSearchPipe,
     EntertainPlacesComponent,
     HistoricalPlacesComponent,
-    SearchPlacePipe,
-    PreservesContainerComponent,
-    PreservesFilterComponent,
-    PreservesContentComponent
+    SearchPlacePipe
     
   ],
   imports: [
@@ -80,15 +69,7 @@ import { PreservesContentComponent } from './preserves-content/preserves-content
     ZooRoutModule
   ],
   providers: [
-    NewsService,
-    FaqService ,
-    ZoosService,
-    AnimalsService,
-    TicketsService,
-    FaqTypeService,
-    PreserveService,
-    ContactusService,
-    PlacesService
+    AppService
     ],
   bootstrap: [AppComponent]
 })

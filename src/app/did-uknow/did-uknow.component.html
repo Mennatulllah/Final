@@ -6,27 +6,13 @@
             <div class="row">
               <div class="col-md-12">
                 <h1 class="arrow">Did you know ?</h1>
-                <div class="features-wrapper">
-                  <div class="col-md-4 col-sm-6 wp2 ">
+                <div class="features-wrapper" >
+                  <div class="col-md-4 col-sm-6 wp2 " *ngFor="let d of diduKnow">
                     <div class="icon">
-					             <img src="../assets/images/0010.jpg" class="img-rounded"/>
+					             <img [src]="d.Image" class="img-rounded"/>
                     </div>
-                    <h2>elephant</h2>
-                    <p>Elephants have a longer pregnancy than any other mammal—almost 22 months.</p>
-                  </div>
-                  <div class="col-md-4 col-sm-6 wp2 delay-05s ">
-                    <div class="icon">
-                      <img src="../assets/images/002.jpg"class="img-rounded"/>
-                    </div>
-                    <h2>elephant</h2>
-                    <p>Elephants have a longer pregnancy than any other mammal—almost 22 months.</p>
-                  </div>							  
-                  <div class="col-md-4 col-sm-6 wp2 delay-1s">
-                    <div class="icon">
-                      <img src="../assets/images/0010.jpg" class="img-rounded"/>
-                    </div>
-                    <h2>elephant</h2>
-                    <p>Elephants have a longer pregnancy than any other mammal—almost 22 months.</p>
+                    <h2>{{d.Title}}</h2>
+                    <p>{{d.Description}}</p>
                   </div>
               </div>
             </div>

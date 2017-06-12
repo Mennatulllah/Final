@@ -1,20 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
+import {AppService} from '../app.service'
+import { Animal } from '../../Interfaces/Animal'
 
 @Component({
+  // moduleId: module.id,
   selector: 'app-animal-details',
   templateUrl: './animal-details.component.html',
   styleUrls: ['./animal-details.component.css']
 })
 export class AnimalDetailsComponent implements OnInit {
-
-  constructor(private actRoute: ActivatedRoute) {
-
+  animals :any =[];
+  details : any =[];
+  // details: Animal;
+  constructor(private animalDetailsServ: AppService, private actRoute: ActivatedRoute) {
   }
+
   ngOnInit() {
-    console.log(this.actRoute.snapshot.params['id'])
 
-
+    this.animalDetailsServ.getAllAnimalDetails(this.actRoute.snapshot.params['id'])
+      .subscribe(Details => {
+        this.animals=Details;
+        this.details = Details.animalType;
+       console.log("dddddd",this.details);
+      });
   }
 
 }

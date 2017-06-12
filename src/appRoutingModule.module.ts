@@ -6,6 +6,7 @@ import { DidUknowComponent } from 'app/did-uknow/did-uknow.component'
 import { ZoosComponent } from 'app/zoos/zoos.component'
 import { NewsComponent } from 'app/news/news.component'
 import { AnimalsComponent } from 'app/animals/animals.component'
+import { AnimalDetailsComponent } from 'app/animal-details/animal-details.component'
 import{TicketsComponent} from 'app/tickets/tickets.component'
 import{StaffComponent} from 'app/staff/staff.component'
 import{TipsComponent} from 'app/tipsforyouvisit/tips.component'
@@ -27,6 +28,7 @@ const routes: Routes=[
          { path:'diduknow', component: DidUknowComponent},
          {path:'news', component:NewsComponent},
          {path:'zoos', component:ZoosComponent},
+         {path:'animaldetails/:id', component:AnimalDetailsComponent},
          {path:'Animals', component:AnimalsComponent},
          {path:'Tickets', component:TicketsComponent},
          {path:'Staff', component:StaffComponent},
