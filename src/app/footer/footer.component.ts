@@ -18,8 +18,8 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
      this.contactServ.getAllContacts().subscribe(Contacts => { 
-      this.contacts = ( <Contact[]> Contacts).filter(a=>a.zoo == '59131ee02ac34812fc941e7f'); 
-       console.log(this.contacts[0]);
+      this.contacts = ( <Contact[]> Contacts).filter(a=>a._id == '591381a272860a46281fb503'); 
+       console.log(this.contacts);
    })
   }
 
