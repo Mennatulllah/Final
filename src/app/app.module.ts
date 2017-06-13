@@ -39,6 +39,10 @@ import { SearchPlacePipe } from '../pipes/search-place.pipe';
 import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
+
+/// reactive forms module 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -66,14 +70,16 @@ import { OrganizationsComponent } from './organizations/organizations.component'
     SearchPlacePipe,
     HeaderWelcomeComponent,
     ContactUsComponent,
-    OrganizationsComponent
+    OrganizationsComponent,
+    StaffFilterPipe
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule ,
-    ZooRoutModule
+    ZooRoutModule,
+    ReactiveFormsModule
   ],
   providers: [
     AppService,
