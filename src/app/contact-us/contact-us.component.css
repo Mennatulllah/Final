@@ -1,0 +1,14 @@
+.col{
+    height: 500px;
+    padding-top: 4%
+
+    
+}
+
+.data .row .fa{
+    padding: 5px;
+    margin:5px;
+    color: orange;
+    border: orange 1px solid;
+    border-radius: 50px;
+}

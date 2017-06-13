@@ -36,6 +36,7 @@ import { EntertainPlacesComponent } from './entertain-places/entertain-places.co
 import { HistoricalPlacesComponent } from './historical-places/historical-places.component';
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
 import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { HeaderWelcomeComponent } from './header-welcome/header-welcome.componen
     EntertainPlacesComponent,
     HistoricalPlacesComponent,
     SearchPlacePipe,
-    HeaderWelcomeComponent
+    HeaderWelcomeComponent,
+    ContactUsComponent
     
   ],
   imports: [

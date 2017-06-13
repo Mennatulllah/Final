@@ -18,6 +18,7 @@ import { GalleryComponent } from 'app/gallery/gallery.component'
 import { AppComponent } from 'app/app.component'
 import { EntertainPlacesComponent } from 'app/entertain-places/entertain-places.component'
 import { HistoricalPlacesComponent } from 'app/historical-places/historical-places.component'
+import { ContactUsComponent } from 'app/contact-us/contact-us.component'
 
 
 const routes: Routes=[
@@ -39,7 +40,8 @@ const routes: Routes=[
          {path:'gallery', component:GalleryComponent},
          {path:'Home', component:HomeComponent},
          {path:'EntertainmentPlaces', component:EntertainPlacesComponent},
-         {path:'HistoricalPlaces', component:HistoricalPlacesComponent}
+         {path:'HistoricalPlaces', component:HistoricalPlacesComponent},
+         { path: 'contact' , component:ContactUsComponent}
          
 
     ]
