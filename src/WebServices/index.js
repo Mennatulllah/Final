@@ -30,7 +30,7 @@ var contacttRoutes = require('./contact');
 var GenderRoutes = require('./animal-Gender');
 var PreservesRoutes = require('./Eqyptian-preserve')
 var StaffRoutes = require('./staff');
-
+var StafftypeRoutes = require('./staffType');
 
 // Handling the urls
 router.use('/zoos',zooRoutes);
@@ -61,6 +61,7 @@ router.use('/animalgender',GenderRoutes);
 router.use('/egyptperserves',PreservesRoutes);
 router.use('/animalstype',animalTypeRoutes);
 router.use('/staff',StaffRoutes);
+router.use('/stafftype',StafftypeRoutes);
 
 
 
