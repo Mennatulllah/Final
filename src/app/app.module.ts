@@ -27,6 +27,7 @@ import { GalleryComponent } from './gallery/gallery.component'
 // services
 
 import { AppService } from './app.service'
+import { ComponentsService } from './components.service'
 
 
 // pipes
@@ -37,6 +38,7 @@ import { HistoricalPlacesComponent } from './historical-places/historical-places
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
 import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { OrganizationsComponent } from './organizations/organizations.component';
 
 
 @NgModule({
@@ -63,7 +65,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HistoricalPlacesComponent,
     SearchPlacePipe,
     HeaderWelcomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    OrganizationsComponent
     
   ],
   imports: [
@@ -73,7 +76,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ZooRoutModule
   ],
   providers: [
-    AppService
+    AppService,
+    ComponentsService
     ],
   bootstrap: [AppComponent]
 })
