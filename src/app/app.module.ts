@@ -39,6 +39,9 @@ import { SearchPlacePipe } from '../pipes/search-place.pipe';
 import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { HomeAnimalSlidderComponent } from './home-animal-slidder/home-animal-slidder.component';
+import { CarouselComponent } from './carousal/carousal.component';
+import { SlideComponent } from './slide/slide.component';
 
 
 @NgModule({
@@ -66,7 +69,10 @@ import { OrganizationsComponent } from './organizations/organizations.component'
     SearchPlacePipe,
     HeaderWelcomeComponent,
     ContactUsComponent,
-    OrganizationsComponent
+    OrganizationsComponent,
+    HomeAnimalSlidderComponent,
+    CarouselComponent,
+    SlideComponent
     
   ],
   imports: [
