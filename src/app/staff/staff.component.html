@@ -1,90 +1,17 @@
-<!--<link href="../../assets/css/flexslider.css" rel="stylesheet">-->
-<!--<link href="../../assets/css/animate.css" rel="stylesheet">-->
-
-<a id="nav-toggle" href="#"></a>
 <section class="team text-center section-padding" id="team">
   <div class="container">
+
     <div class="row">
-      <div class="col-md-12">
-        <h1 class="arrow">meet our Doctors</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="team-wrapper">
-        <div id="teamSlider">
-          <ul class="slides">
-            <li>
-              <div class="col-md-4 col-sm-6 wp5 ">
-                <img src="assets/images/team-03.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-              <div class="col-md-4 col-sm-6 wp5 delay-05s">
-                <img src="assets/images/team-01.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 wp5 delay-1s ">
-                <img src="assets/images/team-06.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-            </li>
-            <li>
-              <div class="col-md-4 col-sm-6 wp5">
-                <img src="assets/images/team-02.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-              <div class="col-md-4 col-sm-6 wp5 delay-05s">
-                <img src="assets/images/team-04.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-              <div class="col-md-4 wp5 delay-1s ">
-                <img src="assets/images/team-05.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="col-md-12" *ngFor="let t of type">
+        <h1 class="arrow">meet our {{t.Title}}</h1>
 
+        <div class="team-wrapper">
+          <div class="col-md-4 col-sm-6 wp5" *ngFor="let s of staffData | stafffilter : t._id">
+            <img style="width: 150px; height: 150px" src="assets/images/{{s.Image}}" alt="Team Member">
+            <h2>{{s.Name}}</h2>
+            <p>{{s.Title}}</p>
+          </div>
 
-
-
-
-
-<section class="team text-center section-padding" id="team">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="arrow">meet our IT Engineers</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="team-wrapper">
-        <div id="teamSlider">
-          <ul class="slides">
-            <li>
-              <div class="col-md-4 col-sm-6 wp5 ">
-
-              </div>
-              <div class="col-md-4 col-sm-6 wp5 delay-05s">
-                <img src="assets/images/team-01.png" alt="Team Member">
-                <h2>Jon Snow</h2>
-                <p>Mobile app. Developer</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 wp5 delay-1s ">
-
-              </div>
-            </li>
-
-          </ul>
         </div>
       </div>
     </div>
