@@ -43,6 +43,11 @@ import { HomeAnimalSlidderComponent } from './home-animal-slidder/home-animal-sl
 import { CarouselComponent } from './carousal/carousal.component';
 import { SlideComponent } from './slide/slide.component';
 
+import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
+
+/// reactive forms module 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +77,8 @@ import { SlideComponent } from './slide/slide.component';
     OrganizationsComponent,
     HomeAnimalSlidderComponent,
     CarouselComponent,
-    SlideComponent
+    SlideComponent,
+    StaffFilterPipe
     
   ],
   
@@ -80,7 +86,8 @@ import { SlideComponent } from './slide/slide.component';
     BrowserModule,
     FormsModule,
     HttpModule ,
-    ZooRoutModule
+    ZooRoutModule,
+    ReactiveFormsModule
   ],
   providers: [
     AppService,
