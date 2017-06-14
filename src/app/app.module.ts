@@ -36,18 +36,15 @@ import { AnimalSearchPipe } from '../pipes/animal-search.pipe';
 import { EntertainPlacesComponent } from './entertain-places/entertain-places.component';
 import { HistoricalPlacesComponent } from './historical-places/historical-places.component';
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
-<<<<<<< HEAD
 import { HomeWelcomeComponent } from './home-welcome/home-welcome.component';
 import { HomeNewsComponent } from './home-news/home-news.component';
-=======
-import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
 import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 
 /// reactive forms module 
 import { ReactiveFormsModule } from '@angular/forms';
->>>>>>> c4b808ecb96546b9126d16e870e1251105872ca8
+
 
 
 @NgModule({
@@ -73,16 +70,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     EntertainPlacesComponent,
     HistoricalPlacesComponent,
     SearchPlacePipe,
-<<<<<<< HEAD
     HomeWelcomeComponent,
-    HomeNewsComponent
-=======
-    HeaderWelcomeComponent,
+    HomeNewsComponent,
     ContactUsComponent,
     OrganizationsComponent,
     StaffFilterPipe
->>>>>>> c4b808ecb96546b9126d16e870e1251105872ca8
-    
   ],
   imports: [
     BrowserModule,
