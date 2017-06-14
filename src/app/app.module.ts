@@ -63,7 +63,6 @@ import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 
 /// reactive forms module 
 import { ReactiveFormsModule } from '@angular/forms';
-import { TestComponent } from './test/test.component';
 
 
 
@@ -97,8 +96,7 @@ import { TestComponent } from './test/test.component';
     HomeAnimalSlidderComponent,
     CarouselComponent,
     SlideComponent,
-    StaffFilterPipe,
-    TestComponent
+    StaffFilterPipe
   ],
   
   imports: [
