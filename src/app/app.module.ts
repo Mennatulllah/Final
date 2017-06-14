@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ZooRoutModule } from 'appRoutingModule.module';
 
+import { SwiperModule } from 'angular2-useful-swiper'; //or for angular-cli the path will be ../../node_modules/angular2-useful-swiper 
+
+
 /// components 
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './feedback/feedback.component';
@@ -63,6 +66,8 @@ import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 
 /// reactive forms module 
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeMainComponent } from './home-main/home-main.component';
+import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.component';
 
 
 
@@ -97,7 +102,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeAnimalSlidderComponent,
     CarouselComponent,
     SlideComponent,
-    StaffFilterPipe
+    StaffFilterPipe,
+    HomeMainComponent,
+    HomeDidyouknowComponent
   ],
   
   imports: [
@@ -105,7 +112,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     HttpModule ,
     ZooRoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SwiperModule
   ],
   providers: [
     AppService,

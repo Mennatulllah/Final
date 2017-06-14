@@ -1,0 +1,40 @@
+  /*@font-face {
+    font-family: 'chawp';
+    src: url('../../assets/fonts/chawp.ttf') format('truetype');
+}
+
+.design h2, .design h2{
+  color:#1c412a;
+margin-top: 6%;
+}
+
+.design h2::after, .design h2::after{
+border: solid 2px #1c412a;
+}
+.design h2, .design h2{
+    font-family:chawp;  
+     font-size: 3em;
+}
+
+.design h2{
+  margin-top: 5%;
+    }
+    .design h2 {
+ 
+    color:#fda856; 
+    line-height: 1;
+    }
+
+.design h2{
+    font-family:chawp;  
+     font-size: 3em;
+}
+
+h2::after, h3::after { content: " "; border: solid 2px #fda856; display: block; width: 35px; margin: 25px auto; }
+.section-padding { padding: 90px 0 100px }*/
+
+
+swiper{
+    height: 300px;
+    width: 400px;
+}

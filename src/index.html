@@ -14,219 +14,52 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
-    <!-- 1. Load libraries -->
-     <!-- Polyfill(s) for older browsers -->
-    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+  <!-- 1. Load libraries -->
+  <!-- Polyfill(s) for older browsers -->
+  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
 
-    <script src="https://unpkg.com/zone.js@0.6.23?main=browser"></script>
-    <script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
-    <script src="https://unpkg.com/systemjs@0.19.27/dist/system.src.js"></script>
+  <script src="https://unpkg.com/zone.js@0.6.23?main=browser"></script>
+  <script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
+  <script src="https://unpkg.com/systemjs@0.19.27/dist/system.src.js"></script>
 
-    <!-- 2. Configure SystemJS -->
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
-    
+  <!-- 2. Configure SystemJS -->
+  <!--<script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) { console.error(err); });
+  </script>-->
+
 </head>
 
-<body style="padding-top: 7%">
+<body style="padding-top: 7%;height:5000px">
   <app-root></app-root>
 
+  <!--Home Main-->
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/home.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sprite').fadeSprite();
+      $('.transition, #face a').leavePage();
+      $('body').jpreLoader({
+        showSplash: true
+      }, function () {
+        $('#face').animateHome();
+        $('#face').resizeFace();
+      });
+    });
+
+  </script>
 
 
-
-		<script src="https://code.jquery.com/jquery.js"></script>	
-		<script src="../../assets/js/plugins.js"></script>
-		<script src="../../assetsjs/beetle.js"></script>
-
-  <script src="./assets/js/jquery-1.11.1.min.js"></script>
-  <script src="./assets/js/jquery.backstretch.min.js"></script>
-  <script src="./assets/js/scripts.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="./assets/js/waypoints.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/didyouknow.js"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="./assets/js/plugins.js"></script>
-  <script src="./assets/js/beetle.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./assets/js/Animal.js"></script>
-
- 
-
+<!--Did You Know Swiper-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script> 
   <!--Did You Know-->
-  <script src="./assets/js/waypoints.min.js"></script>
-  <script src="./assets/js/didyouknow.js"></script>
   <script>
     var cw = $('.icon img').width(); $('.icon img').css({ 'height': cw + 'px' });
   </script>
 
-
-<!--Gallery new-->
-<script>
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-        
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
-    });
-    </script>
-<!--gallery-->
-	<!--JS Links-->
-	<script type='text/javascript' src="./assets/js/jquery-1.11.1.min.js"></script>
-	<script src="./assets/js/jquery.swipebox.min.js"></script>
-	<script type="text/javascript" src="./assets/js/move-top.js"></script>
-	<script type="text/javascript" src="./assets/js/easing.js"></script>
-
-
-	<!------ Light Box ------>
-	<script type="text/javascript">
-		jQuery(function ($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
-
-<!--Gallery-->
-
-<!-- Script for gallery Here -->
-		<script type="text/javascript" src="./assets/js/jquery.mixitup.min.js"></script>
-		<script type="text/javascript">
-			$(function () {
-
-				var filterList = {
-
-					init: function () {
-
-						// MixItUp plugin
-						// http://mixitup.io
-						$('#portfoliolist').mixitup({
-							targetSelector: '.portfolio',
-							filterSelector: '.filter',
-							effects: ['fade'],
-							easing: 'snap',
-							// call the hover effect
-							onMixEnd: filterList.hoverEffect()
-						});
-
-					},
-
-					hoverEffect: function () {
-
-						// Simple parallax effect
-						$('#portfoliolist .portfolio').hover(
-							function () {
-								$(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
-								$(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
-							},
-							function () {
-								$(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
-								$(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
-							}
-						);
-
-					}
-
-				};
-
-				// Run the show!
-				filterList.init();
-
-
-			});
-		</script>
-
-
-  <!--Home-->
-  <script src="./assets/js/wow.js"></script>
-  <script src="./assets/js/jquery.min.js"></script>
-  <script src="./assets/js/modernizr-2.5.3-min.js"></script>
-  <script src="./assets/js/jquery-3.1.1.slim.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./assets/js/jquery.wmuSlider.js"></script>
-  <script type="text/javascript">
-    document.documentElement.className = 'js';
-  </script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="./assets/js/jquery.flipster.js"></script>
-
-  <script>
-    function hover() {
-      // alert(document.getElementById('animalname').innerHTML);
-      document.getElementById('animalname').innerHTML = '<img src="./assets/images/text.png" class="imgslider"/>  <p>ay klam</p>';
-      //   alert(document.getElementById('animalname').innerHTML);
-    }
-    function unhover() {
-      //  alert("out");
-      document.getElementById('animalname').innerHTML = '<img src="./assets/images/text.png" style="display:none;"/>'
-    }
-  </script>
-
-
-
-  <script src="./assets/js/didyouknow2.js"></script>
-  <script src="./assets/js/waypoints.min.js"></script>
-  <script src="./assets/js/jquery.wmuSlider.js"></script>
-  <script>
-    var cw = $('.icon img').width(); $('.icon img').css({ 'height': 0.5 * cw + 'px' });
-  </script>
-
-
-  <script>
-    $(function () {
-      if ($('html').hasClass('csstransforms3d')) {
-        $('.artGroup').removeClass('slide').addClass('flip');
-        $('.artGroup.flip').on('mouseenter',
-          function () {
-            $(this).find('.artwork').addClass('theFlip');
-          });
-        $('.artGroup.flip').on('mouseleave',
-          function () {
-            $(this).find('.artwork').removeClass('theFlip');
-          });
-      } else {
-        $('.artGroup').on('mouseenter',
-          function () {
-            $(this).find('.detail').stop().animate({ bottom: 0 }, 500, 'easeOutCubic');
-          });
-        $('.artGroup').on('mouseleave',
-          function () {
-            $(this).find('.detail').stop().animate({ bottom: ($(this).height() + -1) }, 500, 'easeOutCubic');
-          });
-      }
-    });
-  </script>
-  <script src="./assets/js/jquery.min.js"></script>
-  <script src="./assets/js/home.js"></script>
-  <script type="text/javascript">
-    // $(document).ready(function () {
-    //   $('.sprite').fadeSprite();
-    //   $('.transition, #face a').leavePage();
-    //   $('body').jpreLoader({
-    //     showSplash: true
-    //   }, function () {
-    //     $('#face').animateHome();
-    //     $('#face').resizeFace();
-    //   });
-    // });
-  </script>
-  <script src="./assets/js/plugins.js"></script>
-  <script src="./assets/js/beetle.js"></script>
-
-   <!--Staff-->
+  <!--Staff-->
   <script src="./assets/js/jquery.flexslider.js"></script>
   <script src="./assets/js/modernizr.js"></script>
 </body>
