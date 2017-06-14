@@ -11,6 +11,7 @@ import{TicketsComponent} from 'app/tickets/tickets.component'
 import{StaffComponent} from 'app/staff/staff.component'
 import{TipsComponent} from 'app/tipsforyouvisit/tips.component'
 import{PreservesComponent} from 'app/preserves/preserves.component'
+import{TestComponent} from 'app/test/test.component'
 import{HeaderComponent} from 'app/header/header.component'
 import{FooterComponent} from 'app/footer/footer.component'
 import{HomeComponent} from 'app/home/home.component'
@@ -36,6 +37,7 @@ const routes: Routes=[
          {path:'Staff', component:StaffComponent},
          {path:'Tips', component:TipsComponent},
          {path:'Preserves', component:PreservesComponent},
+         {path:'test', component:TestComponent},
          {path:'Header', component:HeaderComponent},
          {path:'Footer', component:FooterComponent},
          {path:'gallery', component:GalleryComponent},
