@@ -4,60 +4,22 @@
         </div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 30px">
      <h1 class="text-center">Tips for your visit</h1>
-    <div class="panel-group col-lg-8 col-md-10" id="accordion">
-		<div class="icon col-md-3 col-xs-4 f-icon">
-			  <i class="fa fa-question shadow"></i>
-		</div>	
+    <div class="panel-group col-lg-8 col-md-10" id="accordion"
+     *ngFor="let item of data">
+		<div class="icon col-md-3 col-xs-4 f-icon"><i class="{{item.Image}} shadow"></i></div>	
         <div class="faqHeader">			
-		General questions
+		{{item.Title}}
 		</div>
         <div class="panel panel-default">
             
             <div id="collapseTen" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    There really isn’t any special time that more animals are in view, although many of our animals are “early risers” and may be a bit more active in the morning
+                   {{item.Description}}
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">  </div> 
     </div>
 
-
-      <div class="panel-group col-lg-8 col-md-10" id="accordion">
-		<div class="icon col-md-3 col-xs-4 f-icon">
-			  <i class="fa fa-question shadow"></i>
-		</div>	
-        <div class="faqHeader">			
-		General questions
-		</div>
-        <div class="panel panel-default">
-            
-            <div id="collapseTen" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    There really isn’t any special time that more animals are in view, although many of our animals are “early risers” and may be a bit more active in the morning
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default"></div> 
-    </div>
-    
-      <div class="panel-group col-lg-8 col-md-10" id="accordion">
-		<div class="icon col-md-3 col-xs-4 f-icon">
-			  <i class="fa fa-question shadow"></i>
-		</div>	
-        <div class="faqHeader">			
-		General questions
-		</div>
-        <div class="panel panel-default">
-            
-            <div id="collapseTen" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    There really isn’t any special time that more animals are in view, although many of our animals are “early risers” and may be a bit more active in the morning
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default"></div> 
-    </div>
 </div>
