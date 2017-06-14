@@ -36,7 +36,8 @@ import { AnimalSearchPipe } from '../pipes/animal-search.pipe';
 import { EntertainPlacesComponent } from './entertain-places/entertain-places.component';
 import { HistoricalPlacesComponent } from './historical-places/historical-places.component';
 import { SearchPlacePipe } from '../pipes/search-place.pipe';
-import { HeaderWelcomeComponent } from './header-welcome/header-welcome.component';
+import { HomeWelcomeComponent } from './home-welcome/home-welcome.component';
+import { HomeNewsComponent } from './home-news/home-news.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
 import { HomeAnimalSlidderComponent } from './home-animal-slidder/home-animal-slidder.component';
@@ -47,6 +48,7 @@ import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 
 /// reactive forms module 
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -72,14 +74,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     EntertainPlacesComponent,
     HistoricalPlacesComponent,
     SearchPlacePipe,
-    HeaderWelcomeComponent,
+    HomeWelcomeComponent,
+    HomeNewsComponent,
     ContactUsComponent,
     OrganizationsComponent,
     HomeAnimalSlidderComponent,
     CarouselComponent,
     SlideComponent,
     StaffFilterPipe
-    
   ],
   
   imports: [
