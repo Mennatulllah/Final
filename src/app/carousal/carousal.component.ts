@@ -1,6 +1,5 @@
 import {Component, OnDestroy, Input} from '@angular/core';
 import {SlideComponent} from '../slide/slide.component';
-
 export enum Direction {UNKNOWN, NEXT, PREV}
 
 @Component({

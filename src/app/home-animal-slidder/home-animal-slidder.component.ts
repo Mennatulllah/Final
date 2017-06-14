@@ -16,6 +16,7 @@ export class HomeAnimalSlidderComponent {
     constructor() {
             this.addNewSlide();
     }
+     
 
     private addNewSlide() {
          this.slides.push(

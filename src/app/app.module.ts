@@ -75,6 +75,7 @@ import { SlideComponent } from './slide/slide.component';
     SlideComponent
     
   ],
+  
   imports: [
     BrowserModule,
     FormsModule,

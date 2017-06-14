@@ -8,6 +8,7 @@ import {CarouselComponent, Direction} from  '../carousal/carousal.component';
 })
 
 
+
 export class SlideComponent implements OnInit, OnDestroy {
   
     @Input() public index:number;
