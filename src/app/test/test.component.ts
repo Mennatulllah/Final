@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+// import $ = require('jquery')
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css']
 })
-export class GalleryComponent implements OnInit {
+export class TestComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-  $(".filter-button").click(function(){
+      $(".filter-button").click(function(){
         var value = $(this).attr('data-filter');
         
         if(value == "all")
@@ -27,9 +28,8 @@ export class GalleryComponent implements OnInit {
             $('.filter').filter('.'+value).show('3000');
             
         }
-    });
-    
+    })
   }
   
-
+  
 }
