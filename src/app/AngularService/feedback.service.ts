@@ -16,7 +16,7 @@ export class FeedbackService {
    postFeedback(data:any){
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-     let body = JSON.stringify(data);
+     let body = JSON.stringify(data._value);
     return this.http.post('http://localhost:3000/feedback', 
     body,{headers:headers}).map(res => console.log("done"));
   }
