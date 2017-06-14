@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimalsService } from '../AngularService/animals.service';
+import { zoneService } from '../AngularService/zone.service';
+import { Place } from '../../Interfaces/Places';
+import { Animal } from '../../Interfaces/Animal'
 import * as $ from 'jquery';
 
 @Component({
@@ -8,7 +12,9 @@ import * as $ from 'jquery';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  animals : Animal[]=[];
+  places: Place[]=[];
+  constructor(private animalServ : AnimalsService ,private zoneServ : zoneService) { }
 
   ngOnInit() {
   $(".filter-button").click(function(){
@@ -28,6 +34,13 @@ export class GalleryComponent implements OnInit {
             
         }
     });
+    
+
+
+  
+    this.animalServ.getAllAnimals().subscribe(animals=>this.animals=animals);
+    this.zoneServ.getPlaces().subscribe(places=>this.places=places);
+    
     
   }
   

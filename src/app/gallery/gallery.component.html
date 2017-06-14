@@ -5,19 +5,18 @@
     
     <div>
         <button class="btn btn-primary filter-button" data-filter="all">All</button>
-        <button class="btn btn-default filter-button" data-filter="photo">Photo</button>
-        <button class="btn btn-default filter-button" data-filter="graphic">Graphic</button>
-        <button class="btn btn-default filter-button" data-filter="webdesign">Web design</button>
+        <button class="btn btn-default filter-button" data-filter="Places">Places</button>
+        <button class="btn btn-default filter-button" data-filter="Animals">Animals</button>
     </div>
     <br/>
     
     <div class="row">
-        <div class="col-md-3 filter photo">
+        <div class="col-md-3 filter Places" *ngFor="let p of places">
             <div class="each-item">
-                <img class="port-image" src="http://www.templates4all.com/wp-content/uploads/2011/09/Engon-Joomla-Corporate-Portfolio-Template.jpg"/>
+                <img class="port-image" [src]="p.Image"/>
                 <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
+                    <h3>{{p.Title}}</h3>
+                    <p>{{p.Description}}</p>
                 </div>
                 <div class="cap2">
                     <p class="text-center">Visit</p>
@@ -27,20 +26,19 @@
             
         </div>
         
-        <div class="col-md-3 filter graphic photo">
+        <div class="col-md-3 filter Animals" *ngFor="let a of animals">
             <div class="each-item">
-                <img class="port-image" src="http://www.wpchats.com/wp-content/uploads/2011/11/Mixfolio-Wordpress-HTML5-Portfolio-Theme.jpg"/>
+                <img class="port-image" [src]="a.Image"/>
                 <div class="cap1">
-                    <h3>Car show</h3>
-                    <p>A car showroom for all verities of cars to display</p>
+                    <h3>{{a.NickName}}</h3>
                 </div>
                 <div class="cap2">
-                    <p class="text-center">Visit</p>
+                   <a > <p class="text-center">Visit</p></a>
                 </div>
             </div>
         </div>
         
-        <div class="col-md-3 filter webdesign">
+        <!--<div class="col-md-3 filter webdesign">
             <div class="each-item">
                 <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>
                 <div class="cap1">
@@ -53,7 +51,7 @@
             </div>
         </div>
         
-        <div class="col-md-3 filter graphic photo">
+        <div class="col-md-3 filter graphic Animals">
             <div class="each-item">
                 <img class="port-image" src="http://101bestwebsites.com/public/images/entry_images//2009/05/14/medium_www.matthiasdittrich.com.jpg"/>
                 <div class="cap1">
@@ -90,6 +88,6 @@
                     <p class="text-center">Visit</p>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
