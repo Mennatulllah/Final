@@ -1,6 +1,8 @@
 .port-image
 {
     width: 100%;
+    height: 240px;
+
 }
 
 .col-md-3
@@ -24,7 +26,7 @@
     position:absolute;
     width:100%;
     height:70%;
-    background:rgba(255, 255, 255, 0.5);
+    background:rgba(99, 92, 92, 0.31);
     top:0px;
     left:-100%;
     padding:10px;
@@ -37,10 +39,25 @@
     position:absolute;
     width:100%;
     height:30%;
-    background:rgba(0, 178, 255, 0.5);
+    background:rgba(253, 168, 86, 0.69);
     bottom:0px;
     left:100%;
     padding:10px;
     
     transition: all .5s;
+}
+
+
+h3{
+    color:orange;
+    font-size: 30px;
+}
+
+
+p{
+    font-size: 20px;
+}
+
+.desc{
+    color:white
 }

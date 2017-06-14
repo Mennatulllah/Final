@@ -8,7 +8,7 @@
     <div class="col-md-4 col-sm-6 " *ngFor="let place of places | searchPlace:SearchKey " >
       <div class="thumbnail">
         <a href="#">
-          <img [src]='place.Image' alt="Lights" style="width:100%"></a>
+          <img [src]='place.Image' alt="Lights" style="width:100%; height:260px"></a>
           <!--<img src="./assets/images/lights.jpg" alt="Lights" style="width:100%"></a>-->
           <div class="caption">
          <h4>{{ place.Title }}</h4>

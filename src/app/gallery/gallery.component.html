@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="">
-		<h2>Filtering divs</h2>
+		<h2>Zoo Gallery</h2>
 	</div>
     
     <div>
@@ -16,10 +16,10 @@
                 <img class="port-image" [src]="p.Image"/>
                 <div class="cap1">
                     <h3>{{p.Title}}</h3>
-                    <p>{{p.Description}}</p>
+                    <p class="desc" >{{p.Description}}</p>
                 </div>
                 <div class="cap2">
-                    <p class="text-center">Visit</p>
+                    <p class="link" class="text-center">Visit</p>
                 </div>
                 
             </div>
@@ -33,7 +33,8 @@
                     <h3>{{a.NickName}}</h3>
                 </div>
                 <div class="cap2">
-                   <a > <p class="text-center">Visit</p></a>
+             <a [routerLink]="['/animaldetails', a._id]">
+             <p class="text-center">Visit</p></a>
                 </div>
             </div>
         </div>
