@@ -1,4 +1,5 @@
 	<!--<link rel="stylesheet" href="../../assets/css/font-awesome.min.css" media="screen"> -->
+
 <nav class="navbar navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -21,6 +22,8 @@
 			<li><a [routerLink]="['/Tickets']">Tickets</a></li>
 			<li><a [routerLink]="['/Preserves']">Egyptian Preserves</a></li>
 			<li><a [routerLink]="['/zoos']">Other Zoos</a></li>
+			<li><a [routerLink]="['/org']">Our Organizations</a></li>
+			
         </ul>
       </li>
 	<li class="dropdown">
@@ -44,12 +47,13 @@
 									
 								</ul>
 							</li>
-      <li><a href="#">Contact</a></li>
+      <li><a [routerLink]="['/contact']">Contact</a></li>
 	  <li><a [routerLink]="['/gallery']">Gallery</a></li>
 	  <li><a [routerLink]="['/feedback']">Feedback</a></li>
     </ul>
 	</div>
   </div>
 </nav>
+
 
 

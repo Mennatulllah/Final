@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http , RequestOptions, Headers ,Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -75,4 +75,31 @@ export class AppService {
     return this.http.get('http://localhost:3000/feedback')
       .map(res => res.json());
   }
+
+   // feedback services
+   postFeedback(data:any){
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+     let body = JSON.stringify(data._value);
+    return this.http.post('http://localhost:3000/feedback', body,{headers:headers}).map(res => console.log("done"));
+  }
+
+
+  // Staff service 
+
+// get the type of the staff 
+    gettype() {
+    return this.http.get('http://localhost:3000/stafftype')
+      .map(res => res.json());
+  }
+  
+  // Get all staff data from the API
+  getAllStaffData() {
+    return this.http.get('http://localhost:3000/staff')
+      .map(res => res.json());
+  }
+
+ 
+
+
 }

@@ -261,7 +261,7 @@ img {
     height: 600px;
     position: absolute;
     top: 0;
-    background: url(../assets/images/sprite-home.png) 0 0 no-repeat;
+    background: url(../../assets/images/sprite-home.png) 0 0 no-repeat;
     display: block;
     z-index: 1;
   }
@@ -278,7 +278,7 @@ img {
     height: 200px;
     position: absolute;
     bottom: 0px;
-    background: url(../assets/images/sprite-home.png) 0 -1300px no-repeat;
+    background: url(../../assets/images/sprite-home.png) 0 -1300px no-repeat;
     display: block;
   }
   .face .designer-bg {

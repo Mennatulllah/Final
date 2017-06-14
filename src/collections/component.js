@@ -18,6 +18,12 @@ var ComponentSchema = new schema({
     compType:{
         type:schema.Types.ObjectId,
         ref:'Component_Type'
+    },
+    Image:{
+        type:String
+    },
+    Url:{
+        type:String
     }
 })
 

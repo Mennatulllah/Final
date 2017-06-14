@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService} from '../app.service'
+import {Staff} from '../../Interfaces/Staff'
+import {staffType } from '../../Interfaces/stafftype';
+
 
 @Component({
   // moduleId:module.id,
@@ -8,21 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private staffServ:AppService) { }
+  
+  staffData:Staff[]=[];
+   type:staffType[]=[];
   ngOnInit() {
-
-    // $('#teamSlider').flexslider({
-    //   animation: "slide",
-    //   directionNav: false,
-    //   controlNav: true,
-    //   touch: true,
-    //   pauseOnHover: true,
-    //   start: function () {
-    //     $.waypoints('refresh');
-    //   }
-    // });
-
+    // this services to get the type of the staff
+   
+     this.staffServ.getAllStaffData().subscribe(staffData=>{this.staffData=staffData;});
+     this.staffServ.gettype().subscribe(type=>{this.type=type;});
   }
-
 }

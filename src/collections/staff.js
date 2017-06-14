@@ -14,6 +14,11 @@ var StaffSchema = new schema({
     Title:{
         type:String,
         required:true
+    },
+    staffType:{
+        type:schema.Types.ObjectId,
+        ref:'staff_Type',
+        required:true
     }
   
 })

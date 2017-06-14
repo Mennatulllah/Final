@@ -4,13 +4,14 @@ var componentModel=require('../collections/component');
 
 // any url will start with /roles
 router.get("/",function(request,respone){
-    componentModel.find({},{__v:0})
-    .populate({
-        path:'zoo'
-    })
-    .populate({
-        path:'compType'
-    }).then(_result=>respone.json(_result));
+    componentModel.aggregate([{
+        $lookup:{
+            from:"component_types",
+            localField:"compType",
+            foreignField:"_id",
+            as:"compDetails"
+        }
+    }]).then(_result=>respone.json(_result));
 });
 
 router.post("/",function(request,respone){
