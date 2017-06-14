@@ -9,6 +9,7 @@ import { DiduKnowService} from '../AngularService/did-uknow.service'
 })
 export class DidUknowComponent implements OnInit {
   constructor(private diduknowServ: DiduKnowService ) { }
+
 diduKnow :any=[]
   ngOnInit() {
     this.diduknowServ.getAllDidYouKnow()
