@@ -4,4 +4,5 @@ export interface DidYouKnow
     title:string;
     description:string;
     image:string;
+    compType:string;
 }
