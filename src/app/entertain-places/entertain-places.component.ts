@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from '../app.service'
+import {zoneService} from '../AngularService/zone.service'
 import { Place } from '../../Interfaces/Places';
 
 
@@ -16,7 +16,7 @@ export class EntertainPlacesComponent implements OnInit {
   SearchKey:string="";
 
 
-  constructor(private placServ: AppService) { }
+  constructor(private placServ: zoneService) { }
 
   ngOnInit() {
     // Retrieve posts from the API

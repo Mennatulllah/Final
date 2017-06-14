@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from '../app.service'
+import { DiduKnowService} from '../AngularService/did-uknow.service'
 import { DidYouKnow } from '../../Interfaces/DidYouKnow'
 
 @Component({
@@ -9,7 +9,7 @@ import { DidYouKnow } from '../../Interfaces/DidYouKnow'
   styleUrls: ['./did-uknow.component.css','../../assets/css/animate.css','../../assets/css/didyouknow.css']
 })
 export class DidUknowComponent implements OnInit {
-  constructor(private diduknowServ: AppService ) { }
+  constructor(private diduknowServ: DiduKnowService ) { }
  diduKnow: DidYouKnow [];
 
   ngOnInit() {

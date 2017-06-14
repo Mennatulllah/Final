@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service'
+import { TicketsService } from '../AngularService/tickets.service'
 
 
 @Component({
@@ -11,7 +11,7 @@ export class TicketsComponent implements OnInit {
 
   tickets:any=[];
 
-  constructor(private ticketServ: AppService) { }
+  constructor(private ticketServ: TicketsService) { }
 
   ngOnInit() {
      this.ticketServ.getAllTickets().subscribe(tickets => {

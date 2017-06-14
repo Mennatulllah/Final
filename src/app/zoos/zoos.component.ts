@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService} from '../app.service'
+import { ZoosService} from '../AngularService/zoos.service'
 
 @Component({
   // moduleId: module.id,
@@ -11,7 +11,7 @@ export class ZoosComponent implements OnInit {
 
   zoos: any = [];
 
-  constructor(private zooServ: AppService) { }
+  constructor(private zooServ: ZoosService) { }
 
   ngOnInit() {
     // Retrieve posts from the API

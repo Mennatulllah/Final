@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from '../app.service'
+import {FaqService} from '../AngularService/faq.service';
+import {FaqTypeService} from '../AngularService/FAQType.service'
+
 import {FAQ} from '../../Interfaces/FAQ';
 import {FAQType} from '../../Interfaces/FAQType';
 
@@ -14,7 +16,7 @@ export class FaqComponent implements OnInit {
  faq: FAQ[] = [];
  faqtype: FAQType[]=[];
 
-  constructor(private faqserv: AppService ) { }
+  constructor(private faqserv: FaqService , private typeServ : FaqTypeService ) { }
 
   ngOnInit() {
     // Retrieve all the questions and answers of faq from the API
@@ -22,6 +24,6 @@ export class FaqComponent implements OnInit {
     console.log(this.faq);});
 
     // retrieve the faq type from the database 
-     this.faqserv.getAllFAQTypes().subscribe(faqtype => { this.faqtype = (<FAQType[]>faqtype);});
+     this.typeServ.getAllFAQTypes().subscribe(faqtype => { this.faqtype = (<FAQType[]>faqtype);});
   }
 } 

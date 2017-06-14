@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {AppService} from '../app.service'
+import {AnimalDetailService} from '../AngularService/animaldetails.service'
 import { Animal } from '../../Interfaces/Animal'
 
 
@@ -14,7 +14,7 @@ export class AnimalDetailsComponent implements OnInit {
   animals :any =[];
   details : any =[];
   // details: Animal;
-  constructor(private animalDetailsServ: AppService, private actRoute: ActivatedRoute) {
+  constructor(private animalDetailsServ: AnimalDetailService, private actRoute: ActivatedRoute) {
   }
 
   ngOnInit() {

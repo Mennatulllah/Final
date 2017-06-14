@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from '../app.service'
+import {AnimalsService} from '../AngularService/animals.service'
 import * as _ from 'lodash';
 import {Animal } from '../../Interfaces/Animal';
 
@@ -17,7 +17,7 @@ export class AnimalsComponent implements OnInit {
   Fishes:any[];
   Babies:any[];
 
-  constructor(private animalServ: AppService) { }
+  constructor(private animalServ: AnimalsService) { }
   mammal: Animal[] = [];
   birds : Animal[]=[];
   reptiles : Animal[]=[];

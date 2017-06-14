@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl, FormGroup } from '@angular/forms';
 import {Validators} from '@angular/forms';
-import {AppService } from '../app.service';
+import {FeedbackService } from '../AngularService/feedback.service';
 import { feedbackData} from '../../Interfaces/feedback';
 
 @Component({
@@ -12,7 +12,7 @@ import { feedbackData} from '../../Interfaces/feedback';
 })
 export class FeedbackComponent implements OnInit {
 
-    constructor(private fb: FormBuilder ,private serv:AppService ) {}
+    constructor(private fb: FormBuilder ,private serv:FeedbackService ) {}
 
 
     feedback:FormGroup=this.fb.group({

@@ -27,7 +27,22 @@ import { GalleryComponent } from './gallery/gallery.component'
 // services
 
 import { AppService } from './app.service'
-import { ComponentsService } from './components.service'
+// services
+import { AnimalDetailService} from './AngularService/animaldetails.service';
+import { AnimalsService } from './AngularService/animals.service';
+import { ContactusService } from './AngularService/contactus.service';
+import { DiduKnowService } from './AngularService/did-uknow.service';
+import { FaqService } from './AngularService/faq.service';
+import { FaqTypeService } from './AngularService/FAQType.service';
+import { FeedbackService } from './AngularService/feedback.service';
+import { NewsService } from './AngularService/news.service';
+import { PreserveService } from './AngularService/preserve.service';
+import { StaffService } from './AngularService/staff.service';
+import { StaffTypeService } from './AngularService/stafftype.service';
+import { TicketsService } from './AngularService/tickets.service';
+import { ZoosService } from './AngularService/zoos.service';
+import { zoneService } from './AngularService/zone.service';
+import { ComponentsService } from './AngularService/components.service';
 
 
 // pipes
@@ -93,7 +108,21 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [
     AppService,
-    ComponentsService
+    AnimalDetailService,
+    AnimalsService,
+    ContactusService,
+    DiduKnowService,
+    ComponentsService,
+    FaqService,
+    FaqTypeService,
+    FeedbackService,
+    NewsService,
+    PreserveService,
+    StaffService,
+    StaffTypeService,
+    TicketsService,
+    ZoosService,
+    zoneService
     ],
   bootstrap: [AppComponent]
 })

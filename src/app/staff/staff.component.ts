@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService} from '../app.service'
+import { StaffService} from '../AngularService/staff.service';
+import { StaffTypeService} from '../AngularService/stafftype.service';
 import {Staff} from '../../Interfaces/Staff'
 import {staffType } from '../../Interfaces/stafftype';
 
@@ -12,7 +13,7 @@ import {staffType } from '../../Interfaces/stafftype';
 })
 export class StaffComponent implements OnInit {
 
-  constructor(private staffServ:AppService) { }
+  constructor(private staffServ:StaffService , private TypeServ : StaffTypeService) { }
   
   staffData:Staff[]=[];
    type:staffType[]=[];
@@ -20,6 +21,6 @@ export class StaffComponent implements OnInit {
     // this services to get the type of the staff
    
      this.staffServ.getAllStaffData().subscribe(staffData=>{this.staffData=staffData;});
-     this.staffServ.gettype().subscribe(type=>{this.type=type;});
+     this.TypeServ.gettype().subscribe(type=>{this.type=type;});
   }
 }

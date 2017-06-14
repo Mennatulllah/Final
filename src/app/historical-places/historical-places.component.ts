@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { zoneService } from '../AngularService/zone.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class HistoricalPlacesComponent implements OnInit {
   places:any[]=[];
   SearchKey:string="";
 
-  constructor(private placServ: AppService) { }
+  constructor(private placServ: zoneService) { }
 
   ngOnInit() {
     // Retrieve posts from the API

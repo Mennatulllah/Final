@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service'
+import { NewsService } from '../AngularService/news.service'
 
 @Component({
   selector: 'app-news',
@@ -9,7 +9,7 @@ import { AppService } from '../app.service'
 export class NewsComponent implements OnInit {
 news: any = [];
 
-  constructor(private newsServ: AppService) { }
+  constructor(private newsServ: NewsService) { }
 
   ngOnInit() {
     // Retrieve posts from the API

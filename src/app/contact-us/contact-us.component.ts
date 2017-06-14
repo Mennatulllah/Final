@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService} from '../app.service';
+import { ContactusService} from '../AngularService/contactus.service';
 import { Contact } from '../../Interfaces/Contacts';
 
 @Component({
@@ -12,7 +12,7 @@ export class ContactUsComponent implements OnInit {
  Contacts: any[];
 
   contacts : Contact[]=[];
-  constructor(private contactServ: AppService) { }
+  constructor(private contactServ: ContactusService) { }
 
   ngOnInit() {
      this.contactServ.getAllContacts().subscribe(Contacts => { 
