@@ -68,6 +68,9 @@ import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeMainComponent } from './home-main/home-main.component';
 import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.component';
+import { AboutComponent } from './about/about.component';
+import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
+import { AboutHistoryComponent } from './about-history/about-history.component';
 
 
 
@@ -104,7 +107,10 @@ import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.compo
     SlideComponent,
     StaffFilterPipe,
     HomeMainComponent,
-    HomeDidyouknowComponent
+    HomeDidyouknowComponent,
+    AboutComponent,
+    AboutMissionVisionComponent,
+    AboutHistoryComponent
   ],
   
   imports: [

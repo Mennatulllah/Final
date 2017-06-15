@@ -19,7 +19,8 @@ import { AppComponent } from 'app/app.component'
 import { EntertainPlacesComponent } from 'app/entertain-places/entertain-places.component'
 import { HistoricalPlacesComponent } from 'app/historical-places/historical-places.component'
 import { ContactUsComponent } from 'app/contact-us/contact-us.component'
-import { OrganizationsComponent } from 'app/organizations/organizations.component'
+import { OrganizationsComponent } from 'app/organizations/organizations.component';
+import {AboutComponent} from 'app/about/about.component';
 
 
 const routes: Routes=[
@@ -43,7 +44,9 @@ const routes: Routes=[
          {path:'EntertainmentPlaces', component:EntertainPlacesComponent},
          {path:'HistoricalPlaces', component:HistoricalPlacesComponent},
          {path: 'contact' , component:ContactUsComponent},
-         {path: 'org', component:OrganizationsComponent}
+         {path: 'org', component:OrganizationsComponent},
+         {path: 'about' , component:AboutComponent}
+         
          
 
     ]
