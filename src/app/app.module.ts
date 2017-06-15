@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ZooRoutModule } from 'appRoutingModule.module';
+import {ScrollToModule} from 'ng2-scroll-to';
 
 
 
@@ -111,7 +112,8 @@ import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.compo
     FormsModule,
     HttpModule ,
     ZooRoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollToModule.forRoot(),
       ],
   providers: [
     AppService,

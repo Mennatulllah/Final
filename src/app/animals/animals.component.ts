@@ -23,6 +23,9 @@ export class AnimalsComponent implements OnInit {
   reptiles : Animal[]=[];
   fishes:Animal[]=[];
   babies:Animal[]=[];
+  goTo(location: string): void {
+    window.location.hash = location;
+}
   ngOnInit() {
     // Retrieve mammals from the API
     this.animalServ.getAllAnimals().subscribe(Mammals => { 
