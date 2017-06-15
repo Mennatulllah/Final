@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DiduKnowService} from '../AngularService/did-uknow.service'
+import { DiduKnowService} from '../AngularService/did-uknow.service';
 import {DidYouKnow} from '../../Interfaces/DidYouKnow';
 
 @Component({
