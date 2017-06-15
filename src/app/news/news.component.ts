@@ -8,6 +8,9 @@ import { NewsService } from '../AngularService/news.service'
 })
 export class NewsComponent implements OnInit {
 news: any = [];
+SearchKey:string="";
+SearchDate:string = "" ;
+
 
   constructor(private newsServ: NewsService) { }
 
