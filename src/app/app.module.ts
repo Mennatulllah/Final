@@ -64,6 +64,8 @@ import { SlideComponent } from './slide/slide.component';
 
 import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
 import { SearchNewsPipe } from '../pipes/search-news.pipe';
+import { SearchTicketsPipe } from '../pipes/search-tickets.pipe';
+
 
 
 /// reactive forms module 
@@ -115,7 +117,8 @@ import { DatePipe } from './date.pipe';
     AboutMissionVisionComponent,
     AboutHistoryComponent,
     SearchNewsPipe,
-    DatePipe
+    DatePipe,
+    SearchTicketsPipe
   ],
   
   imports: [

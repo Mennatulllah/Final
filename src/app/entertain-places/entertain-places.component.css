@@ -32,14 +32,14 @@
 
 
 
+
 #search-form_3 {
-background: #e1e1e1; /* Fallback color for non-css3 browsers */
+background: rgba(253, 168, 86, 0.26); /* Fallback color for non-css3 browsers */
 width: 50%;
 margin: 10px auto;
 margin-bottom: 3%;
 
 /* Gradients */
-
 background: -webkit-gradient( linear,left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
 background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);
 
@@ -146,4 +146,10 @@ background: #fda856;
     .submit_3{
         width:28%;
     }
+}
+.container h2{
+	font-family: 'CHAWP';
+	margin-bottom: 5%;
+	color: #4e6d34;
+  font-size: 35px;
 }

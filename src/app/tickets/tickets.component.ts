@@ -10,6 +10,7 @@ import { TicketsService } from '../AngularService/tickets.service'
 export class TicketsComponent implements OnInit {
 
   tickets:any=[];
+  SearchKey:string="";
 
   constructor(private ticketServ: TicketsService) { }
 
