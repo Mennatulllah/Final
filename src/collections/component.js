@@ -24,6 +24,9 @@ var ComponentSchema = new schema({
     },
     Url:{
         type:String
+    },
+    Date:{
+        type:Date,
     }
 })
 

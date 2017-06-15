@@ -69,6 +69,7 @@ import { HomeMainComponent } from './home-main/home-main.component';
 import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.component';
 import { AboutComponent } from './about/about.component';
 import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
+import { AboutHistoryComponent } from './about-history/about-history.component';
 
 
 
@@ -107,7 +108,8 @@ import { AboutMissionVisionComponent } from './about-mission-vision/about-missio
     HomeMainComponent,
     HomeDidyouknowComponent,
     AboutComponent,
-    AboutMissionVisionComponent
+    AboutMissionVisionComponent,
+    AboutHistoryComponent
   ],
   
   imports: [
