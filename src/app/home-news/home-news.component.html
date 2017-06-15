@@ -9,27 +9,16 @@
                         <div class="col-md-12">
                             <h2>News</h2>
                             <div class="features-wrapper">
-                                <div class="col-md-4 col-sm-6 wp2 ">
+                                <div class="col-md-4 col-sm-6 wp2 " *ngFor = "let n of news">
                                     <div class="icon">
-                                        <img src="../../assets/images/7951381804_8dab5aaa76_b.jpg" class="img-rounded" />
+                                        <img [src]="n.Image" class="img-rounded"     height= "150"
+ />
                                     </div>
-                                    <h3>elephant</h3>
-                                    <p>Elephants have a longer pregnancy than any other mammal�almost 22 months.</p>
+                                    <h3>{{n.Title}}</h3>
+                                    <p>{{n.Description}}</p>
                                 </div>
-                                <div class="col-md-4 col-sm-6 wp2 delay-05s ">
-                                    <div class="icon">
-                                        <img src="../../assets/images/7951381804_8dab5aaa76_b.jpg" class="img-rounded" />
-                                    </div>
-                                    <h3>elephant</h3>
-                                    <p>Elephants have a longer pregnancy than any other mammal�almost 22 months.</p>
-                                </div>
-                                <div class="col-md-4 col-sm-6 wp2 delay-1s">
-                                    <div class="icon">
-                                        <img src="../../assets/images/7951381804_8dab5aaa76_b.jpg" class="img-rounded" />
-                                    </div>
-                                    <h3>elephant</h3>
-                                    <p>Elephants have a longer pregnancy than any other mammal�almost 22 months.</p>
-                                </div>
+                                
+                               
                             </div>
                         </div>
                     </div>
