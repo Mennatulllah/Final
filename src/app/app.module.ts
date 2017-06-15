@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ZooRoutModule } from 'appRoutingModule.module';
 
-import { SwiperModule } from 'angular2-useful-swiper'; //or for angular-cli the path will be ../../node_modules/angular2-useful-swiper 
 
 
 /// components 
@@ -112,9 +111,8 @@ import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.compo
     FormsModule,
     HttpModule ,
     ZooRoutModule,
-    ReactiveFormsModule,
-    SwiperModule
-  ],
+    ReactiveFormsModule
+      ],
   providers: [
     AppService,
     AnimalDetailService,

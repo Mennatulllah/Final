@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../AngularService/news.service';
+import { News } from '../../Interfaces/News'
 
 @Component({
   selector: 'app-home-news',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeNewsComponent implements OnInit {
 
-  constructor() { }
+News : any[]=[];
+news : News[]=[];
+
+  constructor(private newsServ : NewsService) { }
 
   ngOnInit() {
+    this.newsServ.getAllNews().subscribe(News => this.news = (<News[]> News).slice(Math.max(News.length - 3)));
   }
 
 }
