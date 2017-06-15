@@ -32,8 +32,8 @@
     <div class="banner-bottom">
         <div class="container banner-cards">
             <div class="banner-bot-grids">
-                <div class="col-md-3 banner-grid even artGroup slide">
-                    <div class="artwork">
+                <div class="col-md-3 banner-grid even artGroup slide" >
+                    <div class="artwork" *ngFor="let z of zoos">
                         <div class="icon">
                             <i class="glyphicon glyphicon-time"> </i>
                         </div>
@@ -41,7 +41,8 @@
                             <h4>Openning Times</h4>
                         </div>
                         <div class="detail">
-                            Lorem ipsum dolor sit amet
+                            {{z.OpeningTime}}
+
                         </div>
                     </div>
                 </div>
@@ -54,7 +55,8 @@
                             <h4>Tickets</h4>
                         </div>
                         <div class="detail">
-                            Lorem ipsum dolor sit amet
+                           See all Tickets from <a [routerLink]="['/Tickets']">Here</a>
+
                         </div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@
                             <h4>Directions</h4>
                         </div>
                         <div class="detail">
-                            Lorem ipsum dolor sit amet
+                           Directions from <a [routerLink]="['/contact']">Here</a>
                         </div>
                     </div>
                 </div>

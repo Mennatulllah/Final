@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ZoosService } from '../AngularService/zoos.service';
+import { Zoo } from '../../Interfaces/Zoo';
 import * as $ from 'jquery';
 
 @Component({
@@ -7,10 +9,16 @@ import * as $ from 'jquery';
   styleUrls: ['./home-main.component.css','../../assets/css/mystyle.css','../../assets/css/home.css']
 })
 export class HomeMainComponent implements OnInit {
+    Zoos:any[]=[];
+    zoos:Zoo[]=[];
 
-  constructor() { }
+
+  constructor( private zooServ : ZoosService) { }
 
   ngOnInit() {
+
+
+
        if ($('html').hasClass('csstransforms3d')) {
                 $('.artGroup').removeClass('slide').addClass('flip');
                 $('.artGroup.flip').on('mouseenter',
@@ -32,7 +40,10 @@ export class HomeMainComponent implements OnInit {
                     });
             }
 
-            
+                  this.zooServ.getAllZoos().subscribe(Zoos => {
+          this.zoos = (<Zoo[]> Zoos).filter(a=>a._id== '5913121eb939a209e4819bea')});
+
+
 
   }
 
