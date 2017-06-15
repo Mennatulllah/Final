@@ -71,6 +71,7 @@ import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.compo
 import { AboutComponent } from './about/about.component';
 import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
 import { AboutHistoryComponent } from './about-history/about-history.component';
+import { SampleComponent } from './sample/sample.component';
 
 
 
@@ -110,7 +111,8 @@ import { AboutHistoryComponent } from './about-history/about-history.component';
     HomeDidyouknowComponent,
     AboutComponent,
     AboutMissionVisionComponent,
-    AboutHistoryComponent
+    AboutHistoryComponent,
+    SampleComponent
   ],
   
   imports: [

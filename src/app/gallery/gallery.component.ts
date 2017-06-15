@@ -12,37 +12,41 @@ import * as $ from 'jquery';
 })
 export class GalleryComponent implements OnInit {
 
-  animals : Animal[]=[];
-  places: Place[]=[];
-  constructor(private animalServ : AnimalsService ,private zoneServ : zoneService) { }
 
+  constructor(private animalServ: AnimalsService, private zoneServ: zoneService) { }
+  animals: Animal[] = [];
+  Entertainment: Place[] = [];
+  Historical: Place[] = [];
   ngOnInit() {
-  $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-        
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
+    $(".filter-button").click(function () {
+      var value = $(this).attr('data-filter');
+
+      if (value == "all") {
+        //$('.filter').removeClass('hidden');
+        $('.filter').show('1000');
+      }
+      else {
+        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+        $(".filter").not('.' + value).hide('3000');
+        $('.filter').filter('.' + value).show('3000');
+
+      }
     });
-    
 
+    this.animalServ.getAllAnimals()
+      .subscribe(animals => {
+        this.animals = animals;
+      });
+    this.zoneServ.getPlaces()
+      .subscribe(places => {
+        this.Entertainment = places;
+        // .ZoneType.filter(a=>a._id == "593d1562f42aa705e01002d2");
+        console.log(this.Entertainment);
+      });
 
-  
-    this.animalServ.getAllAnimals().subscribe(animals=>this.animals=animals);
-    this.zoneServ.getPlaces().subscribe(places=>this.places=places);
-    
-    
   }
-  
+
+
 
 }

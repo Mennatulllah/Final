@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DiduKnowService} from '../AngularService/did-uknow.service';
 import {DidYouKnow} from '../../Interfaces/DidYouKnow';
 
+
 @Component({
   //moduleId:module.id,
   selector: 'app-did-uknow',
