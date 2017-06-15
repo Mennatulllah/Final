@@ -74,6 +74,7 @@ import { AboutComponent } from './about/about.component';
 import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
 import { AboutHistoryComponent } from './about-history/about-history.component';
 import { DatePipe } from './date.pipe';
+import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
 
 
 
@@ -115,7 +116,8 @@ import { DatePipe } from './date.pipe';
     AboutMissionVisionComponent,
     AboutHistoryComponent,
     SearchNewsPipe,
-    DatePipe
+    DatePipe,
+    HomeFlippersComponent
   ],
   
   imports: [
