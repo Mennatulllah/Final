@@ -2,14 +2,14 @@
 
     <h2 class="text-center">Zoo Tickets</h2>
  <div  id="search-form_3">
-              <input type="text" class="search_3" placeholder="Search Places" [(ngModel)]="SearchKey" >
+              <input type="text" class="search_3" placeholder="Search Tickets" [(ngModel)]="SearchKey" >
             </div>
 
   <div class="cont">
     	 
      
      <div *ngFor="let ticket of tickets | searchTickets:SearchKey "> 
-	<div class="layer">
+	<div class="layer" [style.background]="ticket.Color" >
        <div class="date">
         <span class="day"> {{ticket.Price}} </span>
         <span class="month"> LE </span>
