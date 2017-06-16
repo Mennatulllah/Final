@@ -25,7 +25,7 @@ import {AboutComponent} from 'app/about/about.component';
 
 const routes: Routes=[
 
-    {path:'',pathMatch:'full', component:FaqComponent},
+    {path:'',pathMatch:'full', component:HomeComponent},
          {path:'faq',component: FaqComponent},
          {path:'feedback',component:FeedbackComponent},
          { path:'diduknow', component: DidUknowComponent},

@@ -1,11 +1,39 @@
-<section class="body" style="margin-top: 100px; display: inline-block">
-  <!--for demo wrap-->
+<div class="container">
+	<div class="">
+		<h2 class="text-center">Egyptian Preserves</h2>
+	</div>
+
+
+ <div class="row">
+        <div class="col-md-4 filter Places" *ngFor="let item of preserveData">
+            <div class="each-item">
+                <img class="port-image img-rounded" [src]="item.Image"/>
+                <div class="cap1">
+
+                  <h3>{{item.ProtectedArea}}</h3><br/>
+          <p><b>Declaration Date : </b>{{item.DeclarationDate}}</p>
+          <p><b>Area  : </b>{{item.Area}} Km<sup>2</sup></p>
+          <p><b>Governorate : </b>{{item.Governorate}}</p>
+       
+                </div>
+               
+                
+            </div>
+            
+        </div>
+ </div>
+
+
+</div>
+
+
+<!--<section class="body" style="margin-top: 100px; display: inline-block">
   <h1>Egyptian Preserves </h1>
   <div class="col-md-4 col-sm-6" *ngFor="let item of preserveData">
     <div class="thumbnail">
-      <a href="#">
-        <img src="./assets/images/Pascal_render.png" alt="Lights" style="width:100%">
-         </a>
+        <img [src]="item.Image" alt="Lights" class="img-rounded" style="width:100%; height:200px;
+        margin-top: 2%;">
+         
         <div class="caption">
           <h3>{{item.ProtectedArea}}</h3><br/>
           <p><b>Declaration Date : </b>{{item.DeclarationDate}}</p>
@@ -29,9 +57,7 @@
 
 
 <section class="body" style="margin-top: 100px">
-  <!--for demo wrap-->
   <h1>Egyptian Preserves </h1>
-  <!--<img src="./assets/images/Pascal_render.png" alt="lizard" width="100px" style="margin-left: 1130px;position: absolute">-->
   <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0" >
       <thead>
@@ -58,4 +84,4 @@
       </tbody>
     </table>
   </div>
-</section>
+</section>-->
