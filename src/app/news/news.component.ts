@@ -17,7 +17,7 @@ SearchDate:string = "" ;
   ngOnInit() {
     // Retrieve posts from the API
     this.newsServ.getAllNews().subscribe(news => {
-      this.news = news;
+      this.news = news
     });
   }
 
