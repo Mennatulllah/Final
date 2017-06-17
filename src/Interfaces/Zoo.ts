@@ -1,19 +1,19 @@
 export interface Zoo {
     _id:string;
-    title:string;
-    description:string;
-    link:string;
-    openingTime:Date;
-    closedTime:Date;
-    offDay:string;
-    seasonStartDate:Date;
-    seasonEndDate:Date;
-    location:{
-        longitude:number,
-        latitude:number
+    Title:string;
+    Description:string;
+    Link:string;
+    OpeningTime:Date;
+    ClosedTime:Date;
+    OffDay:string;
+    SeasonStartDate:Date;
+    SeasonEndDate:Date;
+    Location:{
+        Longitude:number,
+        Latitude:number
         
     };
-    image:string;
+    Image:string;
 
 }
 
