@@ -26,7 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import {GoTopButtonModule} from 'ng2-go-top-button';
+// import {GoTopButtonModule} from 'ng2-go-top-button';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // angular 4.x and greater
 
 // services
@@ -131,7 +131,7 @@ import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
     ZooRoutModule,
     ReactiveFormsModule,
     ScrollToModule.forRoot(),
-    GoTopButtonModule,
+    // GoTopButtonModule,
     //BrowserAnimationsModule
       ],
   providers: [

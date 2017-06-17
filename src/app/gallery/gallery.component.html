@@ -1,44 +1,57 @@
 <div class="container">
-	<div class="">
-		<h2>Zoo Gallery</h2>
-	</div>
-    
+    <div class="">
+        <h2>Zoo Gallery</h2>
+    </div>
+
     <div>
         <button class="btn btn-primary filter-button" data-filter="all">All</button>
         <button class="btn btn-default filter-button" data-filter="Places">Places</button>
         <button class="btn btn-default filter-button" data-filter="Animals">Animals</button>
     </div>
     <br/>
-    
+
     <div class="row">
         <div class="col-md-3 filter Places" *ngFor="let p of places">
-            <div class="each-item">
-                <img class="port-image" [src]="p.Image"/>
+            <div class="each-item" *ngIf="p.ZoneType._id == '593d1562f42aa705e01002d2'">
+                <img class="port-image" [src]="p.Image" />
                 <div class="cap1">
                     <h3>{{p.Title}}</h3>
-                    <p class="desc" >{{p.Description}}</p>
+                    <p class="desc">{{p.Description}}</p>
                 </div>
                 <div class="cap2">
-                    <p class="link" class="text-center">Visit</p>
+                    <a [routerLink]="['/EntertainmentPlaces']">
+                        <p class="link" class="text-center">Visit</p>
+                    </a>
                 </div>
-                
             </div>
-            
+            <div class="each-item" *ngIf="p.ZoneType._id == '593d15f0f42aa705e01002d3'">
+                <img class="port-image" [src]="p.Image" />
+                <div class="cap1">
+                    <h3>{{p.Title}}</h3>
+                    <p class="desc">{{p.Description}}</p>
+                </div>
+                <div class="cap2">
+                    <a [routerLink]="['/HistoricalPlaces']">
+                        <p class="link" class="text-center">Visit</p>
+                    </a>
+                </div>
+            </div>
         </div>
-        
+
         <div class="col-md-3 filter Animals" *ngFor="let a of animals">
             <div class="each-item">
-                <img class="port-image" [src]="a.Image"/>
+                <img class="port-image" [src]="a.Image" />
                 <div class="cap1">
                     <h3>{{a.NickName}}</h3>
                 </div>
                 <div class="cap2">
-             <a [routerLink]="['/animaldetails', a._id]">
-             <p class="text-center">Visit</p></a>
+                    <a [routerLink]="['/animaldetails', a._id]">
+                        <p class="text-center">Visit</p>
+                    </a>
                 </div>
             </div>
         </div>
-        
+
         <!--<div class="col-md-3 filter webdesign">
             <div class="each-item">
                 <img class="port-image" src="http://danielsitek.cz/pic/small/daniel-sitek-portfolio_small.jpg"/>

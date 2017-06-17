@@ -14,9 +14,10 @@ export class GalleryComponent implements OnInit {
 
 
   constructor(private animalServ: AnimalsService, private zoneServ: zoneService) { }
-  animals: Animal[] = [];
-  Entertainment: Place[] = [];
-  Historical: Place[] = [];
+  animals: any = [];
+  places: any = [];
+  details:any=[];
+  // Historical: Place[] = [];
   ngOnInit() {
     $(".filter-button").click(function () {
       var value = $(this).attr('data-filter');
@@ -31,6 +32,8 @@ export class GalleryComponent implements OnInit {
         $(".filter").not('.' + value).hide('3000');
         $('.filter').filter('.' + value).show('3000');
 
+
+
       }
     });
 
@@ -39,10 +42,10 @@ export class GalleryComponent implements OnInit {
         this.animals = animals;
       });
     this.zoneServ.getPlaces()
-      .subscribe(places => {
-        this.Entertainment = places;
-        // .ZoneType.filter(a=>a._id == "593d1562f42aa705e01002d2");
-        console.log(this.Entertainment);
+      .subscribe(Places => {
+        this.places = Places;
+        // this.details=Places.ZoneType;
+        // console.log(this.details);
       });
 
   }
