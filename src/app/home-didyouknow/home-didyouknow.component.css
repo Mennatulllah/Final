@@ -1,11 +1,58 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
-html, body { background: #333 url("https://codepen.io/images/classy_fabric.png"); }
+
+
+@font-face {
+    font-family: 'chawp';
+    src: url('../../assets/fonts/chawp.ttf') format('truetype');
+}
+
+.design h2{
+  color:#1c412a;
+  margin-top: 6%;
+  line-height: 1;
+  font-family:chawp;  
+  font-size: 3em;
+}
+
+h2::after, h3::after { content: " "; border: solid 2px #1c412a; display: block; width: 35px; margin: 25px auto; }
+.section-padding { padding: 90px 0 100px }
+
+.slides{
+	text-align:center;
+	/*padding:2em 0 6em;*/
+}
+.slides h5{
+        font-family: chawp;
+	font-size: 30px;
+	color: #fda856;
+	width: 50%;
+	margin: 0 auto;
+	font-weight: 300;
+	line-height: 1.3em;
+	/*padding: 1.2em 0 0.6em;*/
+}
+.slides p{
+	font-size: 1.8em;
+    color: #777;
+    width: 50%;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.3em;
+    /*padding: 0.2em 0 0.6em;*/
+    font-family:fb;
+}
+.slides span{
+	font-size:1.5em;
+	color:#fda856;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
 .slides {
     padding: 0;
-    width: 100%;
-    height: 480px;
+    width: 1000px;
+    height: 420px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -22,13 +69,13 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
 
 .slides input { display: none; }
 
-/*.slide-container { display: block; }*/
+.slide-container { display: block; }
 
 .slide {
     top: 0;
     opacity: 0;
-    width: 100%;
-    height: 480px;
+    width: 1000px;
+    height: 420px;
     display: block;
     position: absolute;
 
@@ -37,12 +84,8 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
     transition: all .7s ease-in-out;
 }
 
-.slide img {
-    width: 20%;
-    height: 20%;
-}
 
-/*.nav label {
+.nav label {
     width: 200px;
     height: 100%;
     display: none;
@@ -61,13 +104,12 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
     font-family: "Varela Round", sans-serif;
     background-color: rgba(255, 255, 255, .3);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
-}*/
+}
 
-/*.slide:hover + .nav label { opacity: 0.5; }
+.slide:hover + .nav label { opacity: 0.5; }
 
 .nav label:hover { opacity: 1; }
 
-.nav .next { right: 0; }*/
 
 input:checked + .slide-container  .slide {
     opacity: 1;
@@ -96,7 +138,7 @@ input:checked + .slide-container .nav label { display: block; }
 	position: relative;
 	border-radius: 100%;
 	display: inline-block;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-dots .nav-dot:hover {
@@ -111,49 +153,4 @@ input#img-4:checked ~ .nav-dots label#img-dot-4,
 input#img-5:checked ~ .nav-dots label#img-dot-5,
 input#img-6:checked ~ .nav-dots label#img-dot-6 {
 	background: rgba(0, 0, 0, 0.8);
-}
-
-@font-face {
-    font-family: 'chawp';
-    src: url('../../assets/fonts/chawp.ttf') format('truetype');
-}
-
-.design h2{
-  color:#1c412a;
-  margin-top: 6%;
-  line-height: 1;
-  font-family:chawp;  
-  font-size: 3em;
-}
-
-h2::after, h3::after { content: " "; border: solid 2px #1c412a; display: block; width: 35px; margin: 25px auto; }
-.section-padding { padding: 90px 0 100px }
-
-.item-in{
-	text-align:center;
-	/*padding:2em 0 6em;*/
-}
-.item-in h5{
-        font-family: chawp;
-	font-size: 30px;
-	color: #fda856;
-	width: 50%;
-	margin: 0 auto;
-	font-weight: 300;
-	line-height: 1.3em;
-	/*padding: 1.2em 0 0.6em;*/
-}
-.item-in p{
-	font-size: 1.8em;
-    color: #777;
-    width: 50%;
-    margin: 0 auto;
-    font-weight: 300;
-    line-height: 1.3em;
-    /*padding: 0.2em 0 0.6em;*/
-    font-family:fb;
-}
-.item-in span{
-	font-size:1.5em;
-	color:#fda856;
 }

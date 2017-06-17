@@ -1,3 +1,39 @@
-<div ngx-auto-scroll lock-y-offset="10" observe-attributes>
-    <div *ngFor="let message of messages">{{ message }}</div>
+
+<!--<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7_ocZ1Mnmuy6oESbVm4D7WEAHhkdc2D_LEF1pdzLMmryqMhtMaPj8IT1E" style="width:100px">
 </div>
+
+<div class="mySlides fade">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx7AMyhvDshnqj1lVSF3lsUVBkxiIjZZqfW2dNHeHF-PDERNV8kA" style="width:100px">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://s-media-cache-ak0.pinimg.com/736x/63/0f/0e/630f0ef3f6f3126ca11f19f4a9b85243.jpg" style="width:100px">
+</div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>-->
+<ul class="slides" >
+  <div *ngFor="let d of diduKnow;let i=index">
+<!--<p>{{id+i}}</p>-->
+    <input type="radio" name="radio-btn" id="img-{{i+1}}" checked />
+    <li class="slide-container">
+		<div class="slide">
+      <p>{{d.Title}}</p>
+			<img [src]="d.Image" />
+        </div>
+    </li>
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+    </li>
+  </div>
+</ul>
+
