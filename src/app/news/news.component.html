@@ -5,13 +5,13 @@
               <!--<input type="submit" class="submit_3" value="Search" />-->
             </div>
   <div class="row" >
-    <div class="col-md-4 col-sm-6 " *ngFor="let n of news | searchPlace:SearchKey" >
+    <div class="col-md-4 col-sm-6 " *ngFor="let n of news | searchPlace:SearchKey"  style="height: 450px; max-height: 450px;">
       <div class="thumbnail">
-        <a href="#">
-          <img [src]='n.Image' alt="Lights" style="width:100%; height: 150px;" ></a>
+       
+          <img [src]='n.Image' alt="Lights" style="width:100%; height: 150px;" >
           <!--<img src="./assets/images/lights.jpg" alt="Lights" style="width:100%"></a>-->
           <div class="caption">
-         <a href="#"><h3>{{ n.Title }}</h3></a>
+        <h3>{{ n.Title }}</h3>
             <p>{{ n.Description }}</p>
             <p> {{ n.CreatedAt}}
           </div>
