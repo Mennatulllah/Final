@@ -77,7 +77,6 @@ import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.compo
 import { AboutComponent } from './about/about.component';
 import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
 import { AboutHistoryComponent } from './about-history/about-history.component';
-import { DatePipe } from './date.pipe';
 import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
 
 
@@ -120,7 +119,6 @@ import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
     AboutMissionVisionComponent,
     AboutHistoryComponent,
     SearchNewsPipe,
-    DatePipe,
     SearchTicketsPipe,
     HomeFlippersComponent,
  ],
