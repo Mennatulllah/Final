@@ -10,6 +10,8 @@ import * as $ from 'jquery';
 export class HomeFlippersComponent implements OnInit {
   Zoos: any[] = [];
   zoos: Zoo[] = [];
+  hours:any;
+  date:any = new Date().getHours();
 
 
   constructor(private zooServ: ZoosService) { }
@@ -36,8 +38,15 @@ export class HomeFlippersComponent implements OnInit {
         });
     }
 
+
     this.zooServ.getAllZoos().subscribe(Zoos => {
-      this.zoos = (<Zoo[]>Zoos).filter(a => a._id == '5913121eb939a209e4819bea')
+      this.zoos = (<Zoo[]>Zoos).filter(a => a._id == '5913121eb939a209e4819bea');
+      console.log('the array ',this.zoos);
+      console.log('the first index in the array',this.zoos[0]);
+      let opening=this.zoos[0].OpeningTime;
+      console.log(opening);
+      this.hours=opening.getHours();
+      console.log(this.hours);
     });
 
 

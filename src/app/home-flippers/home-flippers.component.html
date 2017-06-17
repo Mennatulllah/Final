@@ -4,13 +4,14 @@
                 <div class="col-md-3 banner-grid even artGroup slide" >
                     <div class="artwork" *ngFor="let z of zoos">
                         <div class="icon">
-                            <i class="glyphicon glyphicon-time"> </i>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+
                         </div>
                         <div class="icon-text">
                             <h4>Openning Times</h4>
                         </div>
-                        <div class="detail">
-                            {{z.OpeningTime}}
+                        <div class="detail font" >
+                            8:30 AM
 
                         </div>
                     </div>
@@ -18,12 +19,13 @@
                 <div class="col-md-3 banner-grid odd artGroup slide">
                     <div class="artwork"> 
                         <div class="icon">
-                            <i class="glyphicon glyphicon-wrench"> </i>
+                           <i class="fa fa-ticket" aria-hidden="true"></i>
+
                         </div>
                         <div class=" icon-text">
                             <h4>Tickets</h4>
                         </div>
-                        <a [routerLink]="['/Tickets']"><div class="detail">
+                        <a [routerLink]="['/Tickets']"><div class="detail font">
                           Click to See all the Tickets 
 
                         </div>
@@ -34,12 +36,12 @@
                 <div class="col-md-3 banner-grid even artGroup slide">
                     <div class="artwork">
                         <div class="icon">
-                            <i class="glyphicon glyphicon-briefcase"> </i>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                         <div class="icon-text">
                             <h4>Directions</h4>
                         </div>
-                        <a [routerLink]="['/contact']"><div class="detail">
+                        <a [routerLink]="['/contact']"><div class="detail font">
                            Directions from Here
                         </div>
                         </a>
@@ -48,13 +50,13 @@
                 <div class="col-md-3 banner-grid odd artGroup slide">
                     <div class="artwork">
                         <div class="icon">
-                            <i class="glyphicon glyphicon-briefcase"> </i>
+                            <i class="fa fa-map" aria-hidden="true"></i>
                         </div>
                         <div class="icon-text">
                             <h4>Zoo Map</h4>
                         </div>
-                        <div class="detail">
-                            Lorem ipsum dolor sit amet
+                        <div class="detail font">
+                            Click to show the Map
                         </div>
                     </div>
                 </div>
@@ -62,13 +64,14 @@
                 <div class="col-md-3 banner-grid even artGroup slide last">
                     <div class="artwork">
                         <div class="icon">
-                            <i class="glyphicon glyphicon-briefcase"> </i>
+                            <i class="fa fa-picture-o" aria-hidden="true"></i>
+
                         </div>
                         <div class="icon-text">
                             <h4>Zoo Gallery</h4>
                         </div>
                         <a [routerLink]="['/gallery']">
-                        <div class="detail">
+                        <div class="detail font">
                           Click to Go to Our Gallery 
                         </div>
                         </a>
