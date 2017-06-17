@@ -13,6 +13,7 @@ import{TipsComponent} from 'app/tipsforyouvisit/tips.component'
 import{PreservesComponent} from 'app/preserves/preserves.component'
 import{HeaderComponent} from 'app/header/header.component'
 import{FooterComponent} from 'app/footer/footer.component'
+import{SampleComponent} from 'app/sample/sample.component'
 import{HomeComponent} from 'app/home/home.component'
 import { GalleryComponent } from 'app/gallery/gallery.component'
 import { AppComponent } from 'app/app.component'
@@ -39,6 +40,7 @@ const routes: Routes=[
          {path:'Preserves', component:PreservesComponent},
          {path:'Header', component:HeaderComponent},
          {path:'Footer', component:FooterComponent},
+         {path:'sample', component:SampleComponent},
          {path:'gallery', component:GalleryComponent},
          {path:'Home', component:HomeComponent},
          {path:'EntertainmentPlaces', component:EntertainPlacesComponent},
