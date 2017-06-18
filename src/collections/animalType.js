@@ -79,7 +79,7 @@ var Animal_TypeSchema = new schema({
         type:Number
     },
     Weight:{
-        type:String
+        type:Number
     },
     Age:{
         type:Number

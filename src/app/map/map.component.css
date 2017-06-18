@@ -1,0 +1,30 @@
+.sebm-google-map-container {
+  height: 300px;
+}
+.img-thumbnail {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        ul {
+            list-style: none;
+        }
+
+        .check
+{
+    opacity:0.5;
+	color:#996;
+	
+}

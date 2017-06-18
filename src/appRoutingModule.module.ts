@@ -19,13 +19,15 @@ import { AppComponent } from 'app/app.component'
 import { EntertainPlacesComponent } from 'app/entertain-places/entertain-places.component'
 import { HistoricalPlacesComponent } from 'app/historical-places/historical-places.component'
 import { ContactUsComponent } from 'app/contact-us/contact-us.component'
-import { OrganizationsComponent } from 'app/organizations/organizations.component';
-import {AboutComponent} from 'app/about/about.component';
+import { OrganizationsComponent } from 'app/organizations/organizations.component'
+import { ContactComponent } from 'app/contact/contact.component';
+import { HistoryComponent } from 'app/history/history.component';
+import { MapComponent } from 'app/map/map.component';
 
 
 const routes: Routes=[
 
-    {path:'',pathMatch:'full', component:HomeComponent},
+    {path:'',pathMatch:'full', component:FaqComponent},
          {path:'faq',component: FaqComponent},
          {path:'feedback',component:FeedbackComponent},
          { path:'diduknow', component: DidUknowComponent},
@@ -45,7 +47,9 @@ const routes: Routes=[
          {path:'HistoricalPlaces', component:HistoricalPlacesComponent},
          {path: 'contact' , component:ContactUsComponent},
          {path: 'org', component:OrganizationsComponent},
-         {path: 'about' , component:AboutComponent}
+         {path: 'contactmap', component:ContactComponent},
+         {path: 'history', component:HistoryComponent},
+         {path: 'map', component:MapComponent}
          
          
 

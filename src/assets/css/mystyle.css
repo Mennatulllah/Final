@@ -7,7 +7,7 @@
   
 }
 .didSec{
-background: url('../../assets/images/fur.jpg') no-repeat center fixed ;
+background: url('../../assets/images/fur.jpg') no-repeat center fixed !important;
 background-size: cover;
 }
 .blend{

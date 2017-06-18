@@ -16,9 +16,6 @@ var ticketSchema = new schema({
         type:schema.Types.ObjectId,
         ref:'Zoo',
         required:true
-    },
-    Color:{
-        type:String
     }
 })
 

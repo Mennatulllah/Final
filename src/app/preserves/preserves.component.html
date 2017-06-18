@@ -1,13 +1,11 @@
-
-
-
 <section class="body" style="margin-top: 100px; display: inline-block">
+  <!--for demo wrap-->
   <h1>Egyptian Preserves </h1>
   <div class="col-md-4 col-sm-6" *ngFor="let item of preserveData">
     <div class="thumbnail">
-        <img [src]="item.Image" alt="Lights" class="img-rounded" style="width:100%; height:200px;
-        margin-top: 2%;">
-         
+      <a href="#">
+        <img src="./assets/images/Pascal_render.png" alt="Lights" style="width:100%">
+         </a>
         <div class="caption">
           <h3>{{item.ProtectedArea}}</h3><br/>
           <p><b>Declaration Date : </b>{{item.DeclarationDate}}</p>
@@ -29,9 +27,11 @@
 
 
 
-<!--
+
 <section class="body" style="margin-top: 100px">
+  <!--for demo wrap-->
   <h1>Egyptian Preserves </h1>
+  <!--<img src="./assets/images/Pascal_render.png" alt="lizard" width="100px" style="margin-left: 1130px;position: absolute">-->
   <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0" >
       <thead>
@@ -58,4 +58,4 @@
       </tbody>
     </table>
   </div>
-</section>-->
+</section>

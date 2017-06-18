@@ -12,44 +12,37 @@ import * as $ from 'jquery';
 })
 export class GalleryComponent implements OnInit {
 
+  animals : Animal[]=[];
+  places: Place[]=[];
+  constructor(private animalServ : AnimalsService ,private zoneServ : zoneService) { }
 
-  constructor(private animalServ: AnimalsService, private zoneServ: zoneService) { }
-  animals: any = [];
-  places: any = [];
-  details:any=[];
-  // Historical: Place[] = [];
   ngOnInit() {
-    $(".filter-button").click(function () {
-      var value = $(this).attr('data-filter');
-
-      if (value == "all") {
-        //$('.filter').removeClass('hidden');
-        $('.filter').show('1000');
-      }
-      else {
-        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-        $(".filter").not('.' + value).hide('3000');
-        $('.filter').filter('.' + value).show('3000');
-
-
-
-      }
+  $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
     });
+    
 
-    this.animalServ.getAllAnimals()
-      .subscribe(animals => {
-        this.animals = animals;
-      });
-    this.zoneServ.getPlaces()
-      .subscribe(Places => {
-        this.places = Places;
-        // this.details=Places.ZoneType;
-        // console.log(this.details);
-      });
 
+  
+    this.animalServ.getAllAnimals().subscribe(animals=>this.animals=animals);
+    this.zoneServ.getPlaces().subscribe(places=>this.places=places);
+    
+    
   }
-
-
+  
 
 }

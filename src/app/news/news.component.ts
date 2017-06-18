@@ -8,16 +8,13 @@ import { NewsService } from '../AngularService/news.service'
 })
 export class NewsComponent implements OnInit {
 news: any = [];
-SearchKey:string="";
-SearchDate:string = "" ;
-
 
   constructor(private newsServ: NewsService) { }
 
   ngOnInit() {
     // Retrieve posts from the API
     this.newsServ.getAllNews().subscribe(news => {
-      this.news = news
+      this.news = news;
     });
   }
 

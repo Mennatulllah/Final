@@ -1,18 +1,3 @@
-<!--<go-top-button [html]="'<i class=\'fa fa-arrow-up\'></i>'"
-                 [animate]="true"
-                 [speed]="50"
-                 [acceleration]="2"
-                 [scrollDistance]="300"
-                 [styles]="{
-                    'border-radius': '30px',
-                    'right': '5px',
-                    'color': 'orange',
-                    'border': '5px solid',
-                    'line-height': '20px'
-                 }">
-  </go-top-button>-->
-
-
   <div class="AnimalMain">
     <div class="headPic">
       <div class="overlay">
@@ -22,20 +7,20 @@
             <div class="col-sm-12 text-center">
             <div class="col col-lg-offset-3 col-lg-2  col-md-4 col-sm-4 col-xs-6">
               <div class="image">
-                <a scrollTo scrollTargetSelector="#mammal"> <img src="assets/images/catcountry.png" class="img-circle"></a>
+                <a href="#mammal"> <img src="assets/images/catcountry.png" class="img-circle"></a>
               </div>
               <p class="Name">Mammals</p>
             </div>
             <div class="col col-lg-2 col-md-4 col-sm-4 col-xs-6">
               <div class="image">
-                <a scrollTo scrollTargetSelector="#bird"><img src="assets/images/tropicalbirdhouse.png" class="img-circle"></a>
+                <a href="#birds"><img src="assets/images/tropicalbirdhouse.png" class="img-circle"></a>
               </div>
               <p class="Name">Birds</p>
 
             </div>
             <div class="col col-lg-2 col-md-4 col-sm-4 col-xs-6">
               <div class="image">
-                <a scrollTo scrollTargetSelector="#fish"> <img src="assets/images/aquarium.png" class="img-circle"></a>
+                <a href="#fish"> <img src="assets/images/aquarium.png" class="img-circle"></a>
               </div>
               <p class="Name">Fishes</p>
 
@@ -43,7 +28,7 @@
             <br/>
             <div class="col col-lg-offset-4 col-lg-2 col-md-offset-2 col-md-4 col-sm-offset-2 col-sm-4 col-xs-6">
               <div class="image">
-                <a scrollTo scrollTargetSelector="#reptitle"> <img src="assets/images/dragonlair.png" class="img-circle"></a>
+                <a href="#reptitle"> <img src="assets/images/dragonlair.png" class="img-circle"></a>
               </div>
               <p class="Name">Reptiles</p>
 
@@ -51,7 +36,7 @@
             <div class="col col-lg-2 col-md-4 col-sm-offset-0  col-sm-4 col-xs-offset-3 col-xs-6">
               <div class="image">
                 
-                <a scrollTo scrollTargetSelector="#baby">
+                <a href="#baby">
                   <img src="assets/images/baby3.png" style="width:100px; height: 100px; padding : 20px" class="img-circle"></a>
               </div>
               <p class="Name">Baby Animals</p>
@@ -65,8 +50,8 @@
 
       </div>
     </div>
-    <div class="begin" >
-      <div class="mammal text-center" id="mammal">
+    <div class="begin" *ngIf="mammal">
+      <div class="mammal text-center">
         <div class="overlay">
           <span>Mammals</span>
           <p class="brief">
@@ -75,7 +60,7 @@
         </div>
       </div>
 
-      <div class="MammalAnimal text-center" >
+      <div class="MammalAnimal text-center" id="mammal">
 
         <div class="row" >
             
@@ -89,7 +74,7 @@
         </div>
 
         
-<!--
+
         <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
@@ -99,14 +84,14 @@
           <a href="#">5</a>
           <a href="#">6</a>
           <a href="#">&raquo;</a>
-        </div>-->
+        </div>
       </div>
       <!--</div>-->
 
 
 
       <div class="begin">
-        <div class="Birds text-center" id="bird">
+        <div class="Birds text-center">
           <div class="overlay">
             <span>Birds</span>
             <p class="brief">
@@ -115,7 +100,7 @@
           </div>
         </div>
 
-        <div class="Bird text-center" >
+        <div class="Bird text-center" id="bird">
           <div class="row">
               
               <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor ="let b of birds | animalSearch:SearchKey">
@@ -126,7 +111,7 @@
               
           </div>
 
-          <!--<div class="pagination text-center">
+          <div class="pagination text-center">
             <a href="#">&laquo;</a>
             <a href="#">1</a>
             <a class="active" href="#">2</a>
@@ -135,7 +120,7 @@
             <a href="#">5</a>
             <a href="#">6</a>
             <a href="#">&raquo;</a>
-          </div>-->
+          </div>
         </div>
       </div>
     </div>
@@ -163,7 +148,7 @@
             
         </div>
 
-        <!--<div class="pagination text-center">
+        <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
           <a class="active" href="#">2</a>
@@ -172,7 +157,7 @@
           <a href="#">5</a>
           <a href="#">6</a>
           <a href="#">&raquo;</a>
-        </div>-->
+        </div>
 
       </div>
     </div>
@@ -199,7 +184,7 @@
            
         </div>
 
-        <!--<div class="pagination text-center">
+        <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
           <a class="active" href="#">2</a>
@@ -208,7 +193,7 @@
           <a href="#">5</a>
           <a href="#">6</a>
           <a href="#">&raquo;</a>
-        </div>-->
+        </div>
       </div>
     </div>
 
@@ -234,7 +219,7 @@
             
         </div>
 
-        <!--<div class="pagination text-center">
+        <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
           <a class="active" href="#">2</a>
@@ -243,7 +228,7 @@
           <a href="#">5</a>
           <a href="#">6</a>
           <a href="#">&raquo;</a>
-        </div>-->
+        </div>
       </div>
     </div>
   </div>

@@ -18,9 +18,6 @@ var EqyptianPreserveSchema = new schema({
    Governorate:{
        type:String,
        required:true
-   },
-   Image:{
-       type:String
    }
 })
 

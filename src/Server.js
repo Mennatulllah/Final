@@ -3,11 +3,12 @@ var mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost:27017/ZooDatabase');
 var routes=require('./WebServices/index');
 var bodyparser=require('body-parser');
-
+var cors = require('cors');
 
 // fire the function express 
 
 var app=express();
+app.use(cors());
 app.use(bodyparser.json());
 app.use(routes);
 

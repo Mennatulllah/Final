@@ -25,23 +25,21 @@
 {
     position:absolute;
     width:100%;
-    height:80%;
-    background:rgba(0,0,0,0.8);
+    height:70%;
+    background:rgba(99, 92, 92, 0.31);
     top:0px;
     left:-100%;
     padding:10px;
     
     transition: all .5s;
 }
-a{
-    text-decoration-style: none;
-}
+
 .cap2
 {
     position:absolute;
     width:100%;
-    height:20%;
-    background:rgba(253, 168, 86, 0.9);
+    height:30%;
+    background:rgba(253, 168, 86, 0.69);
     bottom:0px;
     left:100%;
     padding:10px;
@@ -51,7 +49,7 @@ a{
 
 
 h3{
-    color:#fda856;
+    color:orange;
     font-size: 30px;
 }
 
@@ -61,6 +59,5 @@ p{
 }
 
 .desc{
-    color:white;
-    font-size: 13px;
+    color:white
 }

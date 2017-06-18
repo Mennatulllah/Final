@@ -11,7 +11,6 @@ router.get("/",function(request,response){
 });
 
 
-
 router.post("/",function(request,response){
       var _tickets=new ticketsModel(request.body);
       _tickets.save();

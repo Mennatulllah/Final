@@ -2,7 +2,10 @@
 	font-family: 'chawp';
 	src: url('../../assets/fonts/chawp.otf')
 }
-
+/*@font-face{
+	font-family: 'myriad';
+	src: url('../assets/fonts/MYRIADRegular.ttf')
+}*/
 h1{
   font-family: 'chawp';
   font-size: 30px;
@@ -44,12 +47,13 @@ td{
 }
 
 
-
+/* demo styles */
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 .body{
   background: -webkit-linear-gradient(left, fff, fff);
   background: -moz-linear-gradient(left, fff, fff);
+  /*background: -o-linear-gradient(left, darksalmon, darksalmon);*/
   background: linear-gradient(to right, fff, fff);
   font-family: 'Roboto', sans-serif;
 }
@@ -59,11 +63,13 @@ section{
 }
 
 
+/* follow me template */
 .alg {
   text-align: center
 
 }
 
+/* for custom scrollbar for webkit browser*/
 
 ::-webkit-scrollbar {
     width: 6px;

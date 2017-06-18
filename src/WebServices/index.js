@@ -20,7 +20,7 @@ var asset_typeRoutes = require('./asset-Type');
 var assetRoutes = require('./asset');
 var faqRoutes = require('./FAQ');
 var faqTypeRoutes = require('./FAQ_Type');
-var feedbackRoutes = require('./feedback');
+//var feedbackRoutes = require('./feedback');
 var feedbackTypeRoutes = require('./feedback_Type');
 var feedingControlRoutes = require('./FeedingControl');
 var foodRoutes = require('./Food');
@@ -31,6 +31,9 @@ var GenderRoutes = require('./animal-Gender');
 var PreservesRoutes = require('./Eqyptian-preserve')
 var StaffRoutes = require('./staff');
 var StafftypeRoutes = require('./staffType');
+var animalMarkerRoutes = require('./animalMarker') ;
+var serviceMarkerRoutes = require('./serviceMarker') ;
+
 
 // Handling the urls
 router.use('/zoos',zooRoutes);
@@ -50,7 +53,7 @@ router.use('/assettype',asset_typeRoutes);
 router.use('/assets',assetRoutes);
 router.use('/faq',faqRoutes);
 router.use('/faqtype',faqTypeRoutes);
-router.use('/feedback',feedbackRoutes);
+//router.use('/feedback',feedbackRoutes);
 router.use('/feedbacktype',feedbackTypeRoutes);
 router.use('/feedingcontrol',feedingControlRoutes);
 router.use('/foods',foodRoutes);
@@ -62,6 +65,8 @@ router.use('/egyptperserves',PreservesRoutes);
 router.use('/animalstype',animalTypeRoutes);
 router.use('/staff',StaffRoutes);
 router.use('/stafftype',StafftypeRoutes);
+router.use('/animalMarker',animalMarkerRoutes) ;
+router.use('/serviceMarker',serviceMarkerRoutes) ;
 
 
 

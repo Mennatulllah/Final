@@ -1,13 +1,12 @@
 // /// <reference path="../../typings/index.d.ts"/>
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { ZooRoutModule } from 'appRoutingModule.module';
-import {ScrollToModule} from 'ng2-scroll-to';
-
-
+import { AgmCoreModule } from '@agm/core';
 
 /// components 
 import { AppComponent } from './app.component';
@@ -25,9 +24,12 @@ import { TipsComponent } from './tipsforyouvisit/tips.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './gallery/gallery.component';
-// import {GoTopButtonModule} from 'ng2-go-top-button';
-//import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // angular 4.x and greater
+import { GalleryComponent } from './gallery/gallery.component'
+import { ContactComponent } from './contact/contact.component';
+import { HistoryComponent } from './history/history.component';
+import { MapComponent } from './map/map.component';
+
+
 
 // services
 
@@ -48,6 +50,9 @@ import { TicketsService } from './AngularService/tickets.service';
 import { ZoosService } from './AngularService/zoos.service';
 import { zoneService } from './AngularService/zone.service';
 import { ComponentsService } from './AngularService/components.service';
+import { animalMarkerService } from './AngularService/animalMarker.service';
+import { serviceMarkerService } from './AngularService/serviceMarker.service';
+import { aboutService } from './AngularService/about.service';
 
 
 // pipes
@@ -65,19 +70,9 @@ import { CarouselComponent } from './carousal/carousal.component';
 import { SlideComponent } from './slide/slide.component';
 
 import { StaffFilterPipe} from '../pipes/staffFilter.pipe';
-import { SearchNewsPipe } from '../pipes/search-news.pipe';
-import { SearchTicketsPipe } from '../pipes/search-tickets.pipe';
-
-
 
 /// reactive forms module 
 import { ReactiveFormsModule } from '@angular/forms';
-import { HomeMainComponent } from './home-main/home-main.component';
-import { HomeDidyouknowComponent } from './home-didyouknow/home-didyouknow.component';
-import { AboutComponent } from './about/about.component';
-import { AboutMissionVisionComponent } from './about-mission-vision/about-mission-vision.component';
-import { AboutHistoryComponent } from './about-history/about-history.component';
-import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
 
 
 
@@ -113,15 +108,10 @@ import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
     CarouselComponent,
     SlideComponent,
     StaffFilterPipe,
-    HomeMainComponent,
-    HomeDidyouknowComponent,
-    AboutComponent,
-    AboutMissionVisionComponent,
-    AboutHistoryComponent,
-    SearchNewsPipe,
-    SearchTicketsPipe,
-    HomeFlippersComponent,
- ],
+    ContactComponent,
+    HistoryComponent,
+    MapComponent,
+  ],
   
   imports: [
     BrowserModule,
@@ -129,10 +119,9 @@ import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
     HttpModule ,
     ZooRoutModule,
     ReactiveFormsModule,
-    ScrollToModule.forRoot(),
-    // GoTopButtonModule,
-    //BrowserAnimationsModule
-      ],
+    CommonModule,
+    AgmCoreModule.forRoot({apiKey:'AIzaSyDiwKeZEB0Xy0Rixk-GFpZQFmmKszlIKzA'})
+  ],
   providers: [
     AppService,
     AnimalDetailService,
@@ -149,7 +138,10 @@ import { HomeFlippersComponent } from './home-flippers/home-flippers.component';
     StaffTypeService,
     TicketsService,
     ZoosService,
-    zoneService
+    zoneService,
+    animalMarkerService,
+    serviceMarkerService,
+    aboutService
     ],
   bootstrap: [AppComponent]
 })

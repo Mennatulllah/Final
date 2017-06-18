@@ -1,0 +1,83 @@
+
+
+<div class="row">
+    <!--<center>-->
+    <div class="cent" style="align-content: center; margin-left: 11%;">
+        <label>Filters</label>
+
+                <ul   style="list-style-type: none;">
+                    <li class="col-md-2"><label class="btn btn-block "style="width: 142px;">
+                        <img src="assets/images/iconfilters/an3.png" class="img-thumbnail img-check " />
+                        <input class="hidden" (click)="toggle($event)" checked data-filter="Animals" type="checkbox" value="Animals" />
+                        </label> d l sha3'ala Animals</li>
+                    <li class="col-md-2"><label class="btn btn-block " style="width: 200px;">
+                        <img src="assets/images/iconfilters/2.png" class="img-thumbnail img-check" />
+                        <input class="hidden" (click)="toggle($event)" checked data-filter="Services" type="checkbox" value="Services"/>
+                        </label> Animals</li>
+                    <li class="col-md-2"><label class="btn btn-block " style="width: 200px;">
+
+                        <img src="assets/images/iconfilters/3.png" class="img-thumbnail img-check" />
+                        <input class="hidden" (click)="toggle($event)" checked data-filter="Services" type="checkbox" value="rest" />
+                        </label> </li>
+
+                    <li class="col-md-2"><label class="btn btn-block ">
+
+                        <img src="assets/images/iconfilters/tt.png" class="img-thumbnail img-check" style="width: 115px;" />
+                        <input class="hidden" (click)="toggle($event)" checked data-filter="WC" type="checkbox" value="WC" />
+                        </label> Di l sha3'ala  </li>       
+                        
+                    <li class="col-md-2"><label class="btn btn-block ">
+                        <img src="assets\images\iconfilters\all3.png" class="img-thumbnail img-check " style="width: 115px;" />
+                        <input class="hidden" (click)="toggle($event)" checked data-filter="Animals" type="checkbox" value="all" />
+                        </label> d l sha3'ala Animals</li>            
+                </ul>
+                
+        <!--<ul data-filter style="list-style-type: none;">
+            <li class="col-md-2"><label class="btn btn-block " >
+                    <img src="assets/iconfilters/"  class="img-thumbnail" [ngClass]="{'check': isAnimalChecked}" />
+                    <input class="hidden" (click)="toggle($event)" checked data-filter="Tickets" type="checkbox" [value]="an.title" />
+                    </label> {{item.title}}</li>
+            <li class="col-md-2" *ngFor="let item of servicesMarkers">
+                <img [src]="item.img" class="img-thumbnail" [ngClass]="{'check': isServerChecked}" />
+                <input class="hidden" (click)="toggle($event)" type="checkbox" [value]="item.serviceType.title" />
+                </label> {{item.title}}</li>
+            </li>-->
+            <!--<li class="col-md-2"><label class="btn btn-block " >
+                    <img src="assets/iconfilters/"  class="img-thumbnail" [ngClass]="{'check': isAllChecked}" />
+                    <input class="hidden" (click)="toggle($event)" checked data-filter="all" type="checkbox" value="all" />
+                    </label> All</li>-->
+            <!--<li class="col-md-2"><label class="btn btn-block " >
+                    <img src="assets/iconfilters/"  class="img-thumbnail" [ngClass]="{'check': isticketChecked}" />
+                    <input class="hidden" (click)="toggle($event,'Tickets')" checked data-filter="Tickets" type="checkbox" value="Animals" />
+                    </label> Tickets</li>
+                <li class="col-md-2"><label class="btn btn-block ">
+                    <img [ngClass]="{'check': isAnimalChecked}" (click)='getAnimalsMarkers($event)' ng-value={{isAnimalChecked}} src="../../assets/iconfilters/btn_icn_Facilities-&-Accessibility_1.png" class="img-thumbnail" />
+                    <input class="hidden" onchange="toggle($event,'Animals')" checked data-filter="Animals" type="checkbox" value="Services"/>
+                    </label> Animals</li>
+                <li class="col-md-2"><label class="btn btn-block ">
+                    <img src="assets/iconfilters/btn_icn_food.png" (click)='getFoodMarker($event)' ng-value={{isRestChecked}} class="img-thumbnail" [ngClass]="{'check': isRestChecked}" />
+                    <input class="hidden" onchange="toggle($event, 'rest')" checked data-filter="rest" type="checkbox" value="Services" />
+                    </label> restaurant </li>
+                <li class="col-md-2"><label class="btn btn-block ">
+                    <img src="assets/iconfilters/btn_icn_Zoo-Shops.png" (click)='getShopMarkers($event)' ng-value={{isShopChecked}} class="img-thumbnail" [ngClass]="{'check': isShopChecked}"/>
+                    <input class="hidden" onchange="toggle($event,'wc')" checked data-filter="WC" type="checkbox" value="WC" />
+                    </label> Shop </li>-->
+        <!--</ul>-->
+    </div>
+    <!--</center>-->
+</div>
+
+<div class="container"    style=" margin-top: 7%;" >
+        <!--<center>-->
+        <div class="col-lg-9" style="background-color: lightgray; align-content: center;  margin-left: 11%;">
+            <agm-map  [latitude]="lat" [longitude]="lng" [disableDefaultUI]="f" style="height: 500px;" [zoom]= "17"   >
+                <!--[iconUrl]="a.size"iconUrl="assets/images/iconfilters/an1.png" -->
+                <agm-marker   [latitude]="lat" [longitude]="lng" title="GizaZoo"   ></agm-marker>
+               
+                <agm-marker *ngFor="let a of result"  [latitude]="a.latitute" [longitude]="a.longtitude" [iconUrl]="a.img"  ></agm-marker>
+                <!--<agm-marker *ngFor="let a of servicesMarkers" [latitude]="a.latitute" [longitude]="a.longtitude"></agm-marker>-->
+            </agm-map>
+        </div>
+        <!--</center>-->
+</div>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwKeZEB0Xy0Rixk-GFpZQFmmKszlIKzA&callback=initMap">-->

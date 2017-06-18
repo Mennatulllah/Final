@@ -31,9 +31,8 @@
 }
 
 
-
 #search-form_3 {
-background: rgba(253, 168, 86, 0.26); /* Fallback color for non-css3 browsers */
+background: #e1e1e1; /* Fallback color for non-css3 browsers */
 width: 50%;
 margin: 10px auto;
 margin-bottom: 3%;
@@ -145,10 +144,4 @@ background: #fda856;
     .submit_3{
         width:28%;
     }
-}
-.container h2{
-	font-family: 'CHAWP';
-	margin-bottom: 5%;
-	color: #4e6d34;
-  font-size: 35px;
 }

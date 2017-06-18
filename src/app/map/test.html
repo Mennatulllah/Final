@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <title>Google Maps With Filters </title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+.img-thumbnail {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        ul {
+            list-style: none;
+        }
+
+        html,
+        body {
+            /*height: 100%;*/
+            margin: 0;
+            padding-top: 20px;
+        }
+        .check
+{
+    opacity:0.5;
+	color:#996;
+	
+}
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="row">
+        <center>
+            <div class="cent">
+                <label>Filters</label>
+
+                <ul data-filter  style="list-style-type: none;">
+                    <li class="col-md-2"><label class="btn btn-block ">
+                        <img src="assets/iconfilters/btn_icn_Tickets_0.png" class="img-thumbnail img-check " />
+                        <input class="hidden" onchange="toggle(this,'animal')" checked data-filter="Animals" type="checkbox" value="Animals" /></label> d l sha3'ala Animals</li>
+                    <li class="col-md-2"><label class="btn btn-block ">
+                        <img src="assets/iconfilters/btn_icn_Facilities-&-Accessibility_1.png" class="img-thumbnail img-check" /><input class="hidden" onchange="toggle(this,'services')" checked data-filter="Services" type="checkbox" value="Services"/></label> Animals</li>
+                    <li class="col-md-2"><label class="btn btn-block ">
+                        <img src="assets/iconfilters/btn_icn_food.png" class="img-thumbnail img-check" />
+                        <input class="hidden" onchange="toggle(this, 'services')" checked data-filter="Services" type="checkbox" value="Services" /></label> </li>
+                    <li class="col-md-2"><label class="btn btn-block ">
+                        <img src="assets/iconfilters/btn_icn_Zoo-Shops.png" class="img-thumbnail img-check" />
+                        <input class="hidden" onchange="toggle(this,'wc')" checked data-filter="WC" type="checkbox" value="WC" /></label> Di l sha3'ala  </li>                   
+                </ul>
+            </div>
+         
+
+
+        </center>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <center>
+                <div class="col-lg-9">
+                    <div id="map"></div>
+                </div>
+            </center>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function (e) {
+            $(".img-check").click(function () {
+                $(this).toggleClass("check");
+            });
+        });
+        function toggle(input, item) {
+            console.log(input.checked);
+            switch (item) {
+
+                case 'animal':
+                    if (input.checked == true) {
+                        setMapFor(AllAnimalMarkers, map);
+                    } else {
+                        setMapFor(AllAnimalMarkers, null);
+                    }
+                    break;
+                case 'services':
+
+                    break;
+                case 'wc':
+                    if (input.checked == true) {
+                        setMapFor(AllPlaceMarkers, map);
+                    } else {
+                        setMapFor(AllPlaceMarkers, null);
+                    }
+                    break;
+            }
+        }
+
+        function setMapFor(arr, mapitem) {
+            arr.forEach(function (item) {
+                item.setMap(mapitem);
+            });
+        }
+        //Loading All Data
+        //Load animal Data
+        function LoadAnimalData() {
+            $.ajax({
+                url: 'map/getanimals',
+                method: 'Get',
+                success: function (markers) {
+                    markers.forEach(function (animal) {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(animal.Lat, animal.Lng),
+                            // icon: 'assets/' + icons[feature.type].icon,
+                            icon: {
+                                url: animal.Url,
+                                scaledSize: new google.maps.Size(25, 25),
+                                title: animal.Name
+                            },
+                            map: map
+                        });
+                        AllAnimalMarkers.push(marker);
+                    });
+
+
+                },
+                error: function () {
+                    console.log('Error');
+                }
+            });
+        }
+        //Load WC Data
+        function LoadWCData() {
+            $.ajax({
+                url: 'map/GetWCPlaces',
+                method: 'Get',
+                success: function (markers) {
+                    markers.forEach(function (place) {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(place.Lat, place.Lng),
+                            // icon: 'assets/' + icons[feature.type].icon,
+                            icon: {
+                                url: place.Url,
+                                scaledSize: new google.maps.Size(25, 25),
+                                title: place.Name
+                            },
+                            map: map
+                        });
+                        AllPlaceMarkers.push(marker);
+                    });
+                },
+                error: function () {
+                    console.log('Error');
+                }
+            });
+        }
+
+        //Case Selected Filter Category li
+
+
+
+        var map;
+        function initMap() {
+
+            AllAnimalMarkers = [];
+            AllPlaceMarkers = [];
+            //Load Data
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: new google.maps.LatLng(-33.91722, 151.23064),
+                mapTypeId: 'roadmap'
+            });
+            LoadAnimalData();
+            LoadWCData();
+
+
+
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwKeZEB0Xy0Rixk-GFpZQFmmKszlIKzA&callback=initMap">
+
+    </script>
+</body>
+
+</html>
